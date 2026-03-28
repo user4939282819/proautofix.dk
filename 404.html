@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side ikke fundet – ProAutoFix Albertslund</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    .error-page { min-height: 100vh; background: var(--black); display: flex; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; }
+    .error-code { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(6rem, 20vw, 12rem); font-weight: 900; line-height: 1; color: var(--red); opacity: 0.15; margin-bottom: -20px; }
+    .error-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; text-transform: uppercase; margin-bottom: 16px; }
+    .error-desc { color: var(--grey-light); font-size: 1rem; max-width: 440px; margin: 0 auto 32px; line-height: 1.7; }
+    .error-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .error-quick { margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .error-quick a { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 14px 12px; text-decoration: none; color: var(--grey-light); font-size: .85rem; font-weight: 600; transition: all .2s; text-align: center; }
+    .error-quick a:hover { border-color: var(--red); color: var(--white); background: rgba(220,38,38,0.08); }
+  </style>
+</head>
+<body>
+<nav class="nav" role="navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo"><img src="/images/logo.jpg" alt="ProAutoFix" height="44" style="height:44px;width:auto;display:block;"></a>
+    <div class="nav__cta"><a href="tel:+4581900500" class="nav__phone">+45 81 90 05 00</a><a href="/book-tid/" class="btn btn-primary">Book tid</a></div>
+  </div>
+</nav>
+
+<div class="error-page">
+  <div>
+    <div class="error-code">404</div>
+    <h1 class="error-title">Siden blev ikke fundet</h1>
+    <p class="error-desc">Den side du leder efter eksisterer ikke eller er blevet flyttet. Brug menuen nedenfor til at finde det du søger.</p>
+    <div class="error-links">
+      <a href="/" class="btn btn-primary">Tilbage til forsiden</a>
+      <a href="/services/" class="btn btn-secondary">Se vores ydelser</a>
+    </div>
+    <div class="error-quick" style="margin-top:48px;">
+      <a href="/priser/">🧮 Prisberegner</a>
+      <a href="/book-tid/">📅 Book tid</a>
+      <a href="/services/bremser/">🛞 Bremser</a>
+      <a href="/services/daekskifte/">🔄 Dækskifte</a>
+      <a href="/services/olieskift/">🛢️ Olieskift</a>
+      <a href="/kontakt/">📞 Kontakt</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

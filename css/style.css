@@ -197,6 +197,15 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
   font-size: 1.6rem;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.nav__logo img {
+  height: 62px !important;
+  width: auto !important;
+  display: block;
+  mix-blend-mode: lighten;
+  filter: brightness(1.05) contrast(1.1);
 }
 .nav__logo span { color: var(--red); }
 .nav__links {

@@ -1,10 +1,7 @@
 User-agent: *
 Allow: /
-
-# Disallow legal pages from indexing (handled via meta robots too)
 Disallow: /privatlivspolitik/
 Disallow: /cookiepolitik/
 Disallow: /handelsbetingelser/
 
-# Sitemap
 Sitemap: https://proautofix.dk/sitemap.xml

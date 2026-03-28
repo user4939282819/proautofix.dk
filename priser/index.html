@@ -134,6 +134,9 @@
     .calc-option:hover { border-color: var(--red); background: rgba(220,38,38,0.08); }
     .calc-option.selected { border-color: var(--red); background: rgba(220,38,38,0.15); color: var(--white); }
     .calc-option .opt-icon { font-size: 1.5rem; margin-bottom: 6px; display: block; }
+    .calc-option .opt-icon img { width: 48px; height: 48px; object-fit: contain; filter: brightness(0) invert(1); transition: filter 0.2s; }
+    .calc-option:hover .opt-icon img,
+    .calc-option.selected .opt-icon img { filter: none; }
     .calc-option .opt-label { font-size: 0.85rem; font-weight: 600; }
     .calc-option .opt-sub { font-size: 0.75rem; color: var(--grey); margin-top: 3px; }
 
@@ -310,8 +313,25 @@
         <div class="step-num">Trin 1 af 3</div>
         <h2>Vælg dit <span style="color:var(--red)">bilmærke</span></h2>
         <p>Vi reparerer de fleste almindelige bilmærker — ikke eksklusive fabriksgaranti-biler.</p>
-        <div class="calc-grid" id="brand-grid">
-          <div class="calc-option" data-brand="Toyota"><span class="opt-icon">🚗</span><div class="opt-label">Toyota</div></div>
+                <div class="calc-grid" id="brand-grid">
+          <div class="calc-option" data-brand="Toyota"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Toyota_logo_%28Red%29.png" alt="Toyota" loading="lazy"></span><div class="opt-label">Toyota</div></div>
+          <div class="calc-option" data-brand="Volkswagen"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/400px-Volkswagen_logo_2019.svg.png" alt="VW" loading="lazy"></span><div class="opt-label">Volkswagen</div></div>
+          <div class="calc-option" data-brand="Ford"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/400px-Ford_logo_flat.svg.png" alt="Ford" loading="lazy"></span><div class="opt-label">Ford</div></div>
+          <div class="calc-option" data-brand="Opel"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Opel_logo_2021.svg/400px-Opel_logo_2021.svg.png" alt="Opel" loading="lazy"></span><div class="opt-label">Opel</div></div>
+          <div class="calc-option" data-brand="Peugeot"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Peugeot_2021_Logo.svg/400px-Peugeot_2021_Logo.svg.png" alt="Peugeot" loading="lazy"></span><div class="opt-label">Peugeot</div></div>
+          <div class="calc-option" data-brand="Renault"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Renault_2021_Text.svg/400px-Renault_2021_Text.svg.png" alt="Renault" loading="lazy"></span><div class="opt-label">Renault</div></div>
+          <div class="calc-option" data-brand="Citroën"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Citro%C3%ABn_2022_logo.svg/400px-Citro%C3%ABn_2022_logo.svg.png" alt="Citroën" loading="lazy"></span><div class="opt-label">Citroën</div></div>
+          <div class="calc-option" data-brand="Skoda"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Skoda_Auto_2011_logo.svg/400px-Skoda_Auto_2011_logo.svg.png" alt="Skoda" loading="lazy"></span><div class="opt-label">Skoda</div></div>
+          <div class="calc-option" data-brand="Nissan"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.svg/400px-Nissan_logo.svg.png" alt="Nissan" loading="lazy"></span><div class="opt-label">Nissan</div></div>
+          <div class="calc-option" data-brand="Hyundai"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Hyundai_Motor_Company_logo.svg/400px-Hyundai_Motor_Company_logo.svg.png" alt="Hyundai" loading="lazy"></span><div class="opt-label">Hyundai</div></div>
+          <div class="calc-option" data-brand="Kia"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Kia-logo.svg/400px-Kia-logo.svg.png" alt="Kia" loading="lazy"></span><div class="opt-label">Kia</div></div>
+          <div class="calc-option" data-brand="Mazda"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Mazda_logo.svg/400px-Mazda_logo.svg.png" alt="Mazda" loading="lazy"></span><div class="opt-label">Mazda</div></div>
+          <div class="calc-option" data-brand="Seat"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/SEAT_logo.svg/400px-SEAT_logo.svg.png" alt="Seat" loading="lazy"></span><div class="opt-label">Seat</div></div>
+          <div class="calc-option" data-brand="Honda"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/400px-Honda.svg.png" alt="Honda" loading="lazy"></span><div class="opt-label">Honda</div></div>
+          <div class="calc-option" data-brand="Fiat"><span class="opt-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Fiat_Automobiles_logo.svg/400px-Fiat_Automobiles_logo.svg.png" alt="Fiat" loading="lazy"></span><div class="opt-label">Fiat</div></div>
+          <div class="calc-option" data-brand="Andet"><span class="opt-icon" style="font-size:1.5rem;">🔧</span><div class="opt-label">Andet</div></div>
+        </div>
+      </div>
           <div class="calc-option" data-brand="Volkswagen"><span class="opt-icon">🚗</span><div class="opt-label">Volkswagen</div></div>
           <div class="calc-option" data-brand="Ford"><span class="opt-icon">🚗</span><div class="opt-label">Ford</div></div>
           <div class="calc-option" data-brand="Opel"><span class="opt-icon">🚗</span><div class="opt-label">Opel</div></div>
@@ -541,7 +561,7 @@
     </div>
   </div>
   <div class="footer__bottom">
-    <p>© 2025 ProAutoFix. CVR: [XXXXXXXX]. Alle rettigheder forbeholdes.</p>
+    <p>© 2025 ProAutoFix. CVR: 33313004. Alle rettigheder forbeholdes.</p>
     <nav class="footer__legal">
       <a href="/privatlivspolitik/">Privatlivspolitik</a>
       <a href="/cookiepolitik/">Cookiepolitik</a>
