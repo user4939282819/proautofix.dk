@@ -473,28 +473,25 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
 /* Cookie settings floating button */
 .cookie-float-btn {
   position: fixed;
-  bottom: 24px;
-  left: 24px;
+  bottom: 20px;
+  left: 20px;
   z-index: 8000;
   background: var(--black-card);
-  border: 1px solid var(--black-border);
-  border-radius: 50px;
-  padding: 10px 16px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--grey);
+  justify-content: center;
   cursor: pointer;
   transition: all 0.2s;
+  padding: 0;
 }
-.cookie-float-btn:hover { border-color: var(--red); color: var(--white); }
-.cookie-float-btn svg { width: 14px; height: 14px; fill: var(--grey); }
-.cookie-float-btn:hover svg { fill: var(--red); }
+.cookie-float-btn:hover { background: var(--red); transform: scale(1.1); }
+.cookie-float-btn svg { width: 20px; height: 20px; fill: none; stroke: var(--red); color: var(--red); }
+.cookie-float-btn:hover svg { stroke: var(--white); color: var(--white); }
+.cookie-float-btn span { display: none; }
 
 /* ── Forms ─────────────────────────────────────────────────── */
 .form-group { margin-bottom: 20px; }
@@ -584,7 +581,7 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
   position: relative;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 80px 24px;
+  padding: 48px 24px 64px;
   z-index: 1;
 }
 .hero__eyebrow {
@@ -878,6 +875,7 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
   .info-strip__inner { justify-content: center; }
   .cookie-banner__inner { flex-direction: column; }
+  .hero__content { padding: 28px 20px 48px; }
 }
 
 @media (max-width: 480px) {

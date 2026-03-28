@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core -->
   <url><loc>https://proautofix.dk/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://proautofix.dk/priser/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://proautofix.dk/book-tid/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -7,34 +8,47 @@
   <url><loc>https://proautofix.dk/om-os/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://proautofix.dk/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://proautofix.dk/services/bremser/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://proautofix.dk/services/daekskifte/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://proautofix.dk/services/olieskift/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://proautofix.dk/services/fjedre-og-stoddaempere/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://proautofix.dk/services/serviceeftersyn/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://proautofix.dk/services/synsforberedelse/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://proautofix.dk/services/tandrem/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://proautofix.dk/services/styretoej/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://proautofix.dk/services/airconditioning/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://proautofix.dk/services/udstodning/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://proautofix.dk/autovaerksted-albertslund/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://proautofix.dk/autovaerksted-glostrup/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://proautofix.dk/autovaerksted-taastrup/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://proautofix.dk/autovaerksted-hedehusene/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://proautofix.dk/autovaerksted-ishoj/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://proautofix.dk/autovaerksted-herstedvester/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://proautofix.dk/autovaerksted-vallensbek/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <!-- Service pages -->
+  <url><loc>https://proautofix.dk/services/bremser/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://proautofix.dk/services/daekskifte/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://proautofix.dk/services/olieskift/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://proautofix.dk/services/fjedre-og-stoddaempere/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/services/serviceeftersyn/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://proautofix.dk/services/synsforberedelse/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/services/tandrem/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/services/styretoej/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/services/airconditioning/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/services/udstodning/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- Local SEO pages -->
+  <url><loc>https://proautofix.dk/autovaerksted-albertslund/</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-glostrup/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-taastrup/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-hedehusene/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-ishoj/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-herstedvester/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-vallensbek/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-broendby/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-roedovre/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proautofix.dk/autovaerksted-hvidovre/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- New price/intent pages -->
+  <url><loc>https://proautofix.dk/bremser-pris/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/olieskift-pris/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/daekskifte-pris/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://proautofix.dk/mekaniker-albertslund/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://proautofix.dk/bilsyn-albertslund/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <!-- Blog articles -->
   <url><loc>https://proautofix.dk/blog/hvornaar-skal-mine-bremser-skiftes/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/vinterdaek-vs-helaarsdaek/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/hvad-koster-serviceeftersyn/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/tegn-paa-tandrem-skal-skiftes/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/saadan-laenger-du-bilens-levetid/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://proautofix.dk/privatlivspolitik/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://proautofix.dk/cookiepolitik/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://proautofix.dk/handelsbetingelser/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://proautofix.dk/blog/bremseskiver-eller-bremseklodser/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/saadan-ved-du-om-din-olie-skal-skiftes/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/hvad-er-forskellen-paa-sommerdaek-og-vinterdaek/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://proautofix.dk/blog/bilservice-albertslund-guide/</loc><changefreq>yearly</changefreq><priority>0.75</priority></url>
   <url><loc>https://proautofix.dk/blog/hvorfor-bestaa-bilsyn-foerste-gang/</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <!-- Legal -->
+  <url><loc>https://proautofix.dk/privatlivspolitik/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://proautofix.dk/cookiepolitik/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://proautofix.dk/handelsbetingelser/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

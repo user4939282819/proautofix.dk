@@ -1,12 +1,21 @@
-
-// Cookie banner — hide if already consented
+// Hide cookie banner immediately if already consented — prevents flash on page load
 (function() {
-  var consent = localStorage.getItem('cookieConsent');
-  if (consent) {
-    var banner = document.getElementById('cookieBanner');
-    if (banner) banner.classList.remove('show');
-  }
+  try {
+    var consent = localStorage.getItem('paf_cookie_consent');
+    if (consent) {
+      // Inject a style to hide the banner before paint
+      var style = document.createElement('style');
+      style.textContent = '#cookieBanner { display: none !important; }';
+      document.head.appendChild(style);
+      // Remove the style after JS init takes over
+      document.addEventListener('DOMContentLoaded', function() {
+        style.remove();
+      });
+    }
+  } catch(e) {}
 })();
+
+
 /* ============================================================
    ProAutoFix.dk — Main JS
    Features: Cookie Consent, Mobile Nav, Scroll Animations
