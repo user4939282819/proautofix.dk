@@ -35,10 +35,29 @@
   <!-- Fonts (self-hostable for 100 score — using Google for prototype) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <style>
+    /* Critical CSS inlined for instant render */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--black:#0a0a0a;--black-light:#111;--black-card:#161616;--red:#dc2626;--white:#fff;--grey:#6b7280;--grey-light:#9ca3af;--font-display:'Barlow Condensed',sans-serif;--font-body:'Barlow',sans-serif}
+    body{background:var(--black);color:var(--white);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);height:72px}
+    .nav__inner{max-width:1200px;margin:0 auto;padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between}
+    .nav__logo{display:flex;align-items:center;text-decoration:none}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+    .hero__bg{position:absolute;inset:0;z-index:0}
+    .hero__bg-img{width:100%;height:100%;object-fit:cover}
+    .hero__overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.5) 100%)}
+    .hero__content{position:relative;z-index:2;max-width:700px;padding:120px 20px 80px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-family:var(--font-display);font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;transition:all .2s;cursor:pointer;border:none}
+    .btn-primary{background:var(--red);color:var(--white)}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+  </style>
 
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -146,7 +165,7 @@
 <nav class="nav" role="navigation" aria-label="Primær navigation">
   <div class="nav__inner">
     <a href="/" class="nav__logo" aria-label="ProAutoFix forside">
-      <img src="/images/logo.png" alt="ProAutoFix – Autoværksted i Albertslund" height="68" style="height:68px;width:auto;display:block;background:transparent;">
+      <img src="/images/logo.png" alt="ProAutoFix – Autoværksted i Albertslund" width="124" width="136" height="68" style="height:68px;width:auto;display:block;background:transparent;">
     </a>
 
     <div class="nav__links">
@@ -241,7 +260,7 @@
       <div style="font-family:var(--font-display);font-weight:900;font-size:clamp(1.4rem,3vw,2rem);text-transform:uppercase;color:white;">
         Gratis prisestimering — Ingen forpligtelse
       </div>
-      <p style="color:rgba(255,255,255,0.85);margin:0;font-size:1rem;">
+      <p style="color:#ffffff;margin:0;font-size:1rem;">
         Brug vores prisberegner og få et estimat på din reparation på under 30 sekunder.
       </p>
     </div>
@@ -267,7 +286,7 @@
 
       <a href="/services/bremser/" class="service-card fade-in" aria-label="Bremser og bremseskiver">
         <div class="service-card__img">
-          <img src="/images/img-bremser.jpg" alt="Bremseskiver og bremseservice" width="600" height="338" loading="lazy">
+          <img src="/images/img-bremser.jpg" alt="Bremseskiver og bremseservice" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Populær ydelse</div>
@@ -279,7 +298,7 @@
 
       <a href="/services/daekskifte/" class="service-card fade-in" aria-label="Dækskifte og hjulskifte">
         <div class="service-card__img">
-          <img src="/images/img-daekskifte.jpg" alt="Dækskifte og hjulmontering" width="600" height="338" loading="lazy">
+          <img src="/images/img-daekskifte.jpg" alt="Dækskifte og hjulmontering" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Sæsonservice</div>
@@ -291,7 +310,7 @@
 
       <a href="/services/olieskift/" class="service-card fade-in" aria-label="Olieskift">
         <div class="service-card__img">
-          <img src="/images/img-olieskift.jpg" alt="Olieskift og oliefilter" width="600" height="338" loading="lazy">
+          <img src="/images/img-olieskift.jpg" alt="Olieskift og oliefilter" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Fast ydelse</div>
@@ -303,7 +322,7 @@
 
       <a href="/services/fjedre-og-stoddaempere/" class="service-card fade-in" aria-label="Fjedre og støddæmpere">
         <div class="service-card__img">
-          <img src="/images/img-fjedre.jpg" alt="Fjedre og støddæmpere" width="600" height="338" loading="lazy">
+          <img src="/images/img-fjedre.jpg" alt="Fjedre og støddæmpere" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Komfort & Sikkerhed</div>
@@ -315,7 +334,7 @@
 
       <a href="/services/serviceeftersyn/" class="service-card fade-in" aria-label="Serviceeftersyn">
         <div class="service-card__img">
-          <img src="/images/img-serviceeftersyn.jpg" alt="Serviceeftersyn" width="600" height="338" loading="lazy">
+          <img src="/images/img-serviceeftersyn.jpg" alt="Serviceeftersyn" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Forebyg problemer</div>
@@ -327,7 +346,7 @@
 
       <a href="/services/synsforberedelse/" class="service-card fade-in" aria-label="Klargøring til syn">
         <div class="service-card__img">
-          <img src="/images/img-synsforberedelse.jpg" alt="Klargøring til syn" width="600" height="338" loading="lazy">
+          <img src="/images/img-synsforberedelse.jpg" alt="Klargøring til syn" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw" onerror="this.style.display=\'none\'">>
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Undgå omsyn</div>
@@ -601,17 +620,7 @@
       </a>
     </div>
     <div class="find-us__map">
-      <iframe
-        title="ProAutoFix placering – Rydagervej 6, Albertslund"
-        src="https://maps.google.com/maps?q=Rydagervej+6,+2620+Albertslund,+Denmark&output=embed&z=15"
-        width="100%"
-        height="420"
-        style="border:0;border-radius:12px;display:block;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        aria-label="Kort over ProAutoFix, Rydagervej 6, 2620 Albertslund">
-      </iframe>
+      <div id="map-placeholder" onclick="this.outerHTML='<iframe src=\"https://maps.google.com/maps?q=Rydagervej+6,+2620+Albertslund,+Denmark&output=embed&z=15\" width=\"100%\" height=\"420\" style=\"border:0;border-radius:12px;display:block;\" allowfullscreen title=\"ProAutoFix kort\"></iframe>'" style="width:100%;height:420px;background:#1a1a1a;border-radius:12px;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:12px;"><svg viewBox='0 0 24 24' width='40' height='40' fill='#dc2626'><path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/></svg><span style="color:#fff;font-size:.9rem;font-weight:600;">Klik for at se kort</span></div>
     </div>
   </div>
 </section>
@@ -630,7 +639,7 @@
       .area-card{position:relative;border-radius:12px;text-decoration:none;display:block;min-height:140px;background:var(--black-card);border:1px solid rgba(255,255,255,0.08);transition:transform .25s,border-color .25s;}
       .area-card:hover{transform:translateY(-3px);border-color:rgba(220,38,38,0.5);}
       .area-card__body{padding:24px 20px;display:flex;flex-direction:column;justify-content:center;min-height:140px;}
-      .area-card__badge{font-size:.7rem;color:var(--red);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+      .area-card__badge{font-size:.7rem;color:#fff;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
       .area-card__name{font-family:"Barlow Condensed",sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:4px;}
       .area-card__dist{font-size:.8rem;color:rgba(255,255,255,0.5);}
     </style>
@@ -720,7 +729,7 @@
   <div class="footer__grid">
     <div>
       <div class="footer__logo">
-        <img src="/images/logo.png" alt="ProAutoFix" height="60" style="height:60px;width:auto;display:block;background:transparent;margin-bottom:8px;"></div>
+        <img src="/images/logo.png" alt="ProAutoFix" width="120" height="60" style="height:60px;width:auto;display:block;background:transparent;margin-bottom:8px;"></div>
       <p class="footer__desc">
         Lokalt autoværksted i Albertslund med speciale i bremser, dæk, olieskift og service.
         Hurtig, ærlig og fair — det er vores løfte til dig.
