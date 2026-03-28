@@ -201,11 +201,11 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
   align-items: center;
 }
 .nav__logo img {
-  height: 62px !important;
+  height: 68px !important;
   width: auto !important;
   display: block;
-  mix-blend-mode: lighten;
-  filter: brightness(1.05) contrast(1.1);
+  background: transparent;
+  filter: none;
 }
 .nav__logo span { color: var(--red); }
 .nav__links {
@@ -295,6 +295,14 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
   font-size: 1.8rem;
   text-transform: uppercase;
   margin-bottom: 16px;
+}
+.footer__logo img {
+  height: 64px !important;
+  width: auto !important;
+  display: block;
+  background: transparent;
+  filter: none;
+  margin-bottom: 4px;
 }
 .footer__logo span { color: var(--red); }
 .footer__desc { font-size: 0.95rem; color: var(--grey); margin-bottom: 24px; line-height: 1.7; }
