@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="/css/style.css">
 
   <!-- Favicon placeholder -->
-  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
 
   <!-- JSON-LD: LocalBusiness Schema -->
   <script type="application/ld+json">
@@ -146,7 +146,7 @@
 <nav class="nav" role="navigation" aria-label="Primær navigation">
   <div class="nav__inner">
     <a href="/" class="nav__logo" aria-label="ProAutoFix forside">
-      <img src="/images/logo.jpg" alt="ProAutoFix – Dit Autoværksted" height="44" style="height:44px;width:auto;display:block;">
+      <img src="/images/logo.png" alt="ProAutoFix – Dit Autoværksted" height="52" style="height:52px;width:auto;display:block;">
     </a>
 
     <div class="nav__links">
@@ -576,46 +576,89 @@
         Centralt beliggende i Albertslund — nem at komme til fra hele oplandet.
       </p>
     </div>
+    <style>
+      .area-card{position:relative;border-radius:12px;overflow:hidden;text-decoration:none;display:block;min-height:160px;border:1px solid rgba(255,255,255,0.08);transition:transform .25s,border-color .25s;}
+      .area-card:hover{transform:translateY(-3px);border-color:rgba(220,38,38,0.5);}
+      .area-card__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+      .area-card:hover .area-card__img{transform:scale(1.06);}
+      .area-card__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.25) 100%);}
+      .area-card__body{position:relative;z-index:2;padding:20px 16px;display:flex;flex-direction:column;justify-content:flex-end;min-height:160px;}
+      .area-card__badge{font-size:.7rem;color:var(--red);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
+      .area-card__name{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:3px;}
+      .area-card__dist{font-size:.78rem;color:rgba(255,255,255,0.65);}
+    </style>
     <div class="grid-4" style="gap:16px;">
-      <a href="/autovaerksted-albertslund/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">📍</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Albertslund</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">Vores hjem — 2620</p>
+      <a href="/autovaerksted-albertslund/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1558618047-f4e90e8a9e97?w=600&q=70&auto=format&fit=crop" alt="Albertslund centrum" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">Vores hjem</div>
+          <div class="area-card__name">Albertslund</div>
+          <div class="area-card__dist">2620 · Rydagervej 6</div>
+        </div>
       </a>
-      <a href="/autovaerksted-glostrup/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">🚗</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Glostrup</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">5 min. kørsel</p>
+      <a href="/autovaerksted-glostrup/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=70&auto=format&fit=crop" alt="Glostrup vej" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">5 min. kørsel</div>
+          <div class="area-card__name">Glostrup</div>
+          <div class="area-card__dist">Ring 3 · 2600</div>
+        </div>
       </a>
-      <a href="/autovaerksted-taastrup/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">🚗</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Taastrup</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">10 min. kørsel</p>
+      <a href="/autovaerksted-taastrup/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1445294211564-3ca59d999abd?w=600&q=70&auto=format&fit=crop" alt="Taastrup vej" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">10 min. kørsel</div>
+          <div class="area-card__name">Taastrup</div>
+          <div class="area-card__dist">Køge Bugt · 2630</div>
+        </div>
       </a>
-      <a href="/autovaerksted-hedehusene/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">🚗</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Hedehusene</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">12 min. kørsel</p>
+      <a href="/autovaerksted-hedehusene/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=70&auto=format&fit=crop" alt="Hedehusene natur" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">12 min. kørsel</div>
+          <div class="area-card__name">Hedehusene</div>
+          <div class="area-card__dist">Hedeland · 2640</div>
+        </div>
       </a>
-      <a href="/autovaerksted-ishoj/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">🚗</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Ishøj</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">10 min. kørsel</p>
+      <a href="/autovaerksted-ishoj/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=70&auto=format&fit=crop" alt="Ishøj strand" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">10 min. kørsel</div>
+          <div class="area-card__name">Ishøj</div>
+          <div class="area-card__dist">Strandparken · 2635</div>
+        </div>
       </a>
-      <a href="/autovaerksted-vallensbek/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">🚗</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Vallensbæk</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">8 min. kørsel</p>
+      <a href="/autovaerksted-vallensbek/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=70&auto=format&fit=crop" alt="Vallensbæk sø" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">8 min. kørsel</div>
+          <div class="area-card__name">Vallensbæk</div>
+          <div class="area-card__dist">Vallensbæk Sø · 2665</div>
+        </div>
       </a>
-      <a href="/autovaerksted-herstedvester/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">🚗</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Herstedvester</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">5 min. kørsel</p>
+      <a href="/autovaerksted-herstedvester/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1471421291049-9e44e55b0b41?w=600&q=70&auto=format&fit=crop" alt="Herstedvester motorvej" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">5 min. kørsel</div>
+          <div class="area-card__name">Herstedvester</div>
+          <div class="area-card__dist">Motorring 3 · 2620</div>
+        </div>
       </a>
-      <a href="/autovaerksted-broendby/" class="card" style="text-align:center;text-decoration:none;">
-        <div style="font-size:1.8rem;margin-bottom:12px;">🚗</div>
-        <h4 style="font-size:1rem;text-transform:uppercase;margin-bottom:6px;">Brøndby</h4>
-        <p style="font-size:0.85rem;color:var(--grey);margin:0;">10 min. kørsel</p>
+      <a href="/autovaerksted-broendby/" class="area-card">
+        <img class="area-card__img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70&auto=format&fit=crop" alt="Brøndby vej" loading="lazy">
+        <div class="area-card__overlay"></div>
+        <div class="area-card__body">
+          <div class="area-card__badge">10 min. kørsel</div>
+          <div class="area-card__name">Brøndby</div>
+          <div class="area-card__dist">Brøndby Strand · 2660</div>
+        </div>
       </a>
     </div>
   </div>
@@ -743,7 +786,7 @@
 <footer class="footer" role="contentinfo">
   <div class="footer__grid">
     <div>
-      <div class="footer__logo">Pro<span>Auto</span>Fix</div>
+      <div class="footer__logo"><img src="/images/logo.png" alt="ProAutoFix" height="48" style="height:48px;width:auto;"></div>
       <p class="footer__desc">
         Lokalt autoværksted i Albertslund med speciale i bremser, dæk, olieskift og service.
         Hurtig, ærlig og fair — det er vores løfte til dig.
@@ -754,7 +797,7 @@
       </div>
       <div class="footer__contact-item">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <a href="mailto:info@proautofix.dk">info@proautofix.dk</a>
+        <a href="mailto:nicklas@proautofix.dk">nicklas@proautofix.dk</a>
       </div>
       <div class="footer__contact-item">
         <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
