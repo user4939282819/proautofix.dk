@@ -1,3 +1,12 @@
+
+// Cookie banner — hide if already consented
+(function() {
+  var consent = localStorage.getItem('cookieConsent');
+  if (consent) {
+    var banner = document.getElementById('cookieBanner');
+    if (banner) banner.classList.remove('show');
+  }
+})();
 /* ============================================================
    ProAutoFix.dk — Main JS
    Features: Cookie Consent, Mobile Nav, Scroll Animations
