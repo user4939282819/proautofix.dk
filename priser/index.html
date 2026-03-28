@@ -119,8 +119,8 @@
     .calc-grid.wide { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 
     .calc-option {
-      background: rgba(255,255,255,0.04);
-      border: 2px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.15);
       border-radius: 10px;
       padding: 16px 12px;
       text-align: center;
@@ -134,9 +134,9 @@
     .calc-option:hover { border-color: var(--red); background: rgba(220,38,38,0.08); }
     .calc-option.selected { border-color: var(--red); background: rgba(220,38,38,0.15); color: var(--white); }
     .calc-option .opt-icon { font-size: 1.5rem; margin-bottom: 6px; display: block; }
-    .calc-option .opt-icon img { width: 52px; height: 40px; object-fit: contain; filter: brightness(0) invert(1); transition: filter 0.2s; display:block; margin: 0 auto 4px; }
-    .calc-option:hover .opt-icon img,
-    .calc-option.selected .opt-icon img { filter: none; }
+    #brand-grid .calc-option .opt-icon img { width: 56px; height: 44px; object-fit: contain; filter: none; transition: filter 0.2s; display:block; margin: 0 auto 4px; background: transparent; }
+    #brand-grid .calc-option:hover .opt-icon img,
+    #brand-grid .calc-option.selected .opt-icon img { filter: none; }
     .calc-option .opt-label { font-size: 0.85rem; font-weight: 600; }
     .calc-option .opt-sub { font-size: 0.75rem; color: var(--grey); margin-top: 3px; }
 
@@ -262,7 +262,7 @@
 <nav class="nav" role="navigation" aria-label="Primær navigation">
   <div class="nav__inner">
     <a href="/" class="nav__logo" aria-label="ProAutoFix forside">
-      Pro<span>Auto</span>Fix
+      <img src="/images/logo.png" alt="ProAutoFix" height="68" style="height:68px;width:auto;display:block;background:transparent;">
     </a>
     <div class="nav__links">
       <a href="/services/">Ydelser</a>
