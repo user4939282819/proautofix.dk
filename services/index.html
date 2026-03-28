@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vores Ydelser – Autoværksted i Albertslund | ProAutoFix</title>
+  <meta name="description" content="Se alle vores bilreparationer og mekanikertjenester i Albertslund. Bremser, dæk, olieskift, serviceeftersyn, tandrem og meget mere. Book tid hos ProAutoFix.">
+  <link rel="canonical" href="https://proautofix.dk/services/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    .page-hero{background:var(--black);padding:80px 0 60px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .page-hero .breadcrumb{font-size:.82rem;color:var(--grey);margin-bottom:20px;letter-spacing:.04em;}
+    .page-hero .breadcrumb a{color:var(--grey);text-decoration:none;}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin-bottom:16px;}
+    .page-hero h1 span{color:var(--red);}
+    .page-hero p{color:var(--grey-light);font-size:1.05rem;max-width:560px;margin:0 auto;}
+    .services-section{background:var(--black-light);padding:60px 0 80px;}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;max-width:960px;margin:0 auto;padding:0 20px;}
+    .svc-card{background:var(--black-card);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:border-color .25s,transform .25s;}
+    .svc-card:hover{border-color:rgba(220,38,38,0.4);transform:translateY(-3px);}
+    .svc-card__img{height:180px;overflow:hidden;position:relative;}
+    .svc-card__img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+    .svc-card:hover .svc-card__img img{transform:scale(1.04);}
+    .svc-card__body{padding:24px;}
+    .svc-card__icon{font-size:1.5rem;margin-bottom:10px;}
+    .svc-card__title{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+    .svc-card__desc{color:var(--grey-light);font-size:.85rem;line-height:1.6;margin-bottom:16px;}
+    .svc-card__link{color:var(--red);font-size:.85rem;font-weight:600;text-decoration:none;letter-spacing:.03em;}
+    .svc-card__link:hover{text-decoration:underline;}
+    .cta-strip{background:var(--red);padding:50px 20px;text-align:center;}
+    .cta-strip h2{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;text-transform:uppercase;margin-bottom:10px;}
+    .cta-strip p{opacity:.9;margin-bottom:24px;}
+    .cta-strip .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .cta-strip .btn-white{background:var(--white);color:var(--black);padding:14px 28px;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;text-decoration:none;letter-spacing:.05em;transition:opacity .2s;}
+    .cta-strip .btn-white:hover{opacity:.9;}
+    .cta-strip .btn-outline-white{background:transparent;border:2px solid rgba(255,255,255,.5);color:var(--white);padding:12px 28px;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;text-decoration:none;letter-spacing:.05em;transition:border-color .2s;}
+    .cta-strip .btn-outline-white:hover{border-color:var(--white);}
+  </style>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Primær navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">Pro<span>Auto</span>Fix</a>
+    <div class="nav__links"><a href="/services/" aria-current="page">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a><a href="/om-os/">Om os</a></div>
+    <div class="nav__cta"><a href="tel:+4500000000" class="nav__phone">+45 00 00 00 00</a><a href="/book-tid/" class="btn btn-primary">Book tid</a></div>
+    <button class="nav__burger" id="navBurger" aria-expanded="false" aria-label="Åbn menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a>
+  <a href="/om-os/">Om os</a><a href="/kontakt/">Kontakt</a>
+  <a href="/book-tid/" style="color:var(--red);">Book tid →</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Forside</a> › Ydelser</div>
+    <h1>Vores <span>ydelser</span></h1>
+    <p>Alt hvad din hverdagsbil har brug for — under ét tag i Albertslund. Fair priser, hurtig service, ingen overraskelser.</p>
+  </div>
+</section>
+
+<section class="services-section">
+  <div class="services-grid">
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80&auto=format&fit=crop" alt="Bremser og bremseskiver" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">🛞</div>
+        <div class="svc-card__title">Bremser & Bremseskiver</div>
+        <div class="svc-card__desc">Professionel udskiftning af bremseklodser og bremseskiver foran og bagpå. Sikkerhed først.</div>
+        <a href="/services/bremser/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80&auto=format&fit=crop" alt="Dækskifte og hjulmontering" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">🔄</div>
+        <div class="svc-card__title">Dækskifte & Hjulmontering</div>
+        <div class="svc-card__desc">Sæsonskift af dæk, hjulmontering og balancering. Vi klarer sommer- og vinterdæk hurtigt.</div>
+        <a href="/services/daekskifte/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1504222490345-c075b7c1b5a4?w=600&q=80&auto=format&fit=crop" alt="Olieskift" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">🛢️</div>
+        <div class="svc-card__title">Olieskift</div>
+        <div class="svc-card__desc">Motorolie og filter skiftes med den korrekte olietype til din bil. Klar på 30–45 minutter.</div>
+        <a href="/services/olieskift/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=600&q=80&auto=format&fit=crop" alt="Fjedre og støddæmpere" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">🔩</div>
+        <div class="svc-card__title">Fjedre & Støddæmpere</div>
+        <div class="svc-card__desc">Kontrol, reparation og udskiftning af fjedre og støddæmpere. Bedre vejholdelse og komfort.</div>
+        <a href="/services/fjedre-og-stoddaempere/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=600&q=80&auto=format&fit=crop" alt="Serviceeftersyn" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">🔍</div>
+        <div class="svc-card__title">Serviceeftersyn</div>
+        <div class="svc-card__desc">Komplet gennemgang af din bil — vi finder problemerne, inden de bliver dyre.</div>
+        <a href="/services/serviceeftersyn/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1504222490345-c075b7c1b5a4?w=600&q=80&auto=format&fit=crop" alt="Klargøring til syn" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">✅</div>
+        <div class="svc-card__title">Klargøring til Syn</div>
+        <div class="svc-card__desc">Vi finder og retter fejl inden synet, så du kan stille op med ro i sindet — og bestå første gang.</div>
+        <a href="/services/synsforberedelse/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=600&q=80&auto=format&fit=crop" alt="Tandrem udskiftning" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">⛓️</div>
+        <div class="svc-card__title">Tandrem Udskiftning</div>
+        <div class="svc-card__desc">Undgå motorhavari — skift tandrembmen til tiden. Vi inkluderer altid spændrulle og vandpumpe.</div>
+        <a href="/services/tandrem/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80&auto=format&fit=crop" alt="Styretøj og hjulgeometri" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">🎯</div>
+        <div class="svc-card__title">Styretøj & Hjulgeometri</div>
+        <div class="svc-card__desc">Måling og justering af hjulgeometri. Forhindrer ujævnt dækslitage og forbedrer vejholdelse.</div>
+        <a href="/services/styretoej/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1504222490345-c075b7c1b5a4?w=600&q=80&auto=format&fit=crop" alt="Aircondition service" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">❄️</div>
+        <div class="svc-card__title">Aircondition Service</div>
+        <div class="svc-card__desc">Rengøring, kontrol og fyldning af dit klimaanlæg. Frisk luft i kabinen hele sommeren.</div>
+        <a href="/services/airconditioning/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card__img"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80&auto=format&fit=crop" alt="Udstødning reparation" width="600" height="360" loading="lazy"></div>
+      <div class="svc-card__body">
+        <div class="svc-card__icon">💨</div>
+        <div class="svc-card__title">Udstødning & Katalysator</div>
+        <div class="svc-card__desc">Reparation og udskiftning af lyddæmpere, katalysatorer og lambda-sonder.</div>
+        <a href="/services/udstodning/" class="svc-card__link">Læs mere →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Klar til at booke din tid?</h2>
+  <p>Brug vores prisberegner og se hvad din reparation koster — inden du ringer.</p>
+  <div class="cta-btns">
+    <a href="/book-tid/" class="btn-white">Book tid nu</a>
+    <a href="/priser/" class="btn-outline-white">Se prisestimat</a>
+  </div>
+</div>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__grid">
+    <div><div class="footer__logo">Pro<span>Auto</span>Fix</div><p class="footer__desc">Lokalt autoværksted i Albertslund. Hurtig, ærlig og fair.</p><div class="footer__contact-item"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.5 11.5 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.5 11.5 0 00.58 3.6 1 1 0 01-.25 1.01l-2.21 2.18z"/></svg><a href="tel:+4500000000">+45 00 00 00 00</a></div><div class="footer__reviews" style="margin-top:24px;"><a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer" class="footer__review-badge"><span class="footer__stars">★★★★★</span><span><strong>4,8</strong> på Trustpilot</span></a></div></div>
+    <div><div class="footer__col-title">Ydelser</div><nav class="footer__links"><a href="/services/bremser/">Bremser</a><a href="/services/daekskifte/">Dækskifte</a><a href="/services/olieskift/">Olieskift</a><a href="/services/fjedre-og-stoddaempere/">Fjedre & Støddæmpere</a><a href="/services/serviceeftersyn/">Serviceeftersyn</a><a href="/services/tandrem/">Tandrem</a></nav></div>
+    <div><div class="footer__col-title">Område</div><nav class="footer__links"><a href="/autovaerksted-albertslund/">Albertslund</a><a href="/autovaerksted-glostrup/">Glostrup</a><a href="/autovaerksted-taastrup/">Taastrup</a><a href="/autovaerksted-hedehusene/">Hedehusene</a><a href="/autovaerksted-ishoj/">Ishøj</a></nav></div>
+    <div><div class="footer__col-title">Info</div><nav class="footer__links"><a href="/om-os/">Om os</a><a href="/priser/">Prisberegner</a><a href="/book-tid/">Book tid</a><a href="/kontakt/">Kontakt</a><a href="/blog/">Blog</a></nav></div>
+  </div>
+  <div class="footer__bottom"><p>© 2025 ProAutoFix. CVR: [XXXXXXXX].</p><nav class="footer__legal"><a href="/privatlivspolitik/">Privatlivspolitik</a><a href="/cookiepolitik/">Cookiepolitik</a><a href="/handelsbetingelser/">Handelsbetingelser</a></nav></div>
+</footer>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true"><div class="cookie-banner__inner"><p>Vi bruger cookies. <a href="/cookiepolitik/">Læs mere</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
+<button class="cookie-settings-fab" id="cookieSettingsFab" aria-label="Tilpas cookies">🍪</button>
+<script src="/js/main.js"></script>
+</body>
+</html>

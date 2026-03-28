@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilblog – Råd og Tips til Din Bil | ProAutoFix Albertslund</title>
+  <meta name="description" content="Læs vores bilblog med praktiske råd, tips og guides til din hverdagsbil. Fra dit lokale autoværksted i Albertslund.">
+  <link rel="canonical" href="https://proautofix.dk/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <style>
+    .page-hero{background:var(--black);padding:80px 0 60px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .page-hero .breadcrumb{font-size:.82rem;color:var(--grey);margin-bottom:20px;letter-spacing:.04em;}
+    .page-hero .breadcrumb a{color:var(--grey);text-decoration:none;}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin-bottom:16px;}
+    .page-hero h1 span{color:var(--red);}
+    .page-hero p{color:var(--grey-light);font-size:1.05rem;max-width:540px;margin:0 auto;}
+    .blog-section{background:var(--black-light);padding:60px 0 80px;}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;max-width:960px;margin:0 auto;padding:0 20px;}
+    .blog-card{background:var(--black-card);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:border-color .25s,transform .2s;text-decoration:none;color:var(--white);display:flex;flex-direction:column;}
+    .blog-card:hover{border-color:rgba(220,38,38,0.4);transform:translateY(-3px);}
+    .blog-card__img{height:190px;overflow:hidden;}
+    .blog-card__img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+    .blog-card:hover .blog-card__img img{transform:scale(1.04);}
+    .blog-card__body{padding:22px;flex:1;display:flex;flex-direction:column;}
+    .blog-card__cat{font-size:.72rem;color:var(--red);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px;}
+    .blog-card__title{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;text-transform:uppercase;margin-bottom:10px;line-height:1.2;}
+    .blog-card__excerpt{color:var(--grey-light);font-size:.84rem;line-height:1.6;flex:1;margin-bottom:14px;}
+    .blog-card__meta{font-size:.75rem;color:var(--grey);display:flex;gap:10px;}
+    .blog-card__cta{color:var(--red);font-size:.82rem;font-weight:600;margin-top:12px;letter-spacing:.02em;}
+  </style>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Primær navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">Pro<span>Auto</span>Fix</a>
+    <div class="nav__links"><a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/" aria-current="page">Blog</a><a href="/om-os/">Om os</a></div>
+    <div class="nav__cta"><a href="tel:+4500000000" class="nav__phone">+45 00 00 00 00</a><a href="/book-tid/" class="btn btn-primary">Book tid</a></div>
+    <button class="nav__burger" id="navBurger" aria-expanded="false" aria-label="Åbn menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a>
+  <a href="/om-os/">Om os</a><a href="/kontakt/">Kontakt</a>
+  <a href="/book-tid/" style="color:var(--red);">Book tid →</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Forside</a> › Bilblog</div>
+    <h1>Vores <span>bilblog</span></h1>
+    <p>Praktiske råd, tips og guides til din hverdagsbil — fra mekanikere med over 10 års erfaring i Albertslund.</p>
+  </div>
+</section>
+
+<section class="blog-section">
+  <div class="blog-grid">
+
+    <a href="/blog/hvornaar-skal-mine-bremser-skiftes/" class="blog-card">
+      <div class="blog-card__img"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=75&auto=format&fit=crop" alt="Hvornår skal bremser skiftes" width="600" height="360" loading="lazy"></div>
+      <div class="blog-card__body">
+        <div class="blog-card__cat">Bremser</div>
+        <div class="blog-card__title">Hvornår skal mine bremser skiftes?</div>
+        <div class="blog-card__excerpt">Lær at genkende advarselstegnene — og forstå hvad der sker, hvis du venter for længe.</div>
+        <div class="blog-card__meta"><span>15. jan. 2025</span><span>·</span><span>5 min</span></div>
+        <div class="blog-card__cta">Læs artikel →</div>
+      </div>
+    </a>
+
+    <a href="/blog/vinterdaek-vs-helaarsdaek/" class="blog-card">
+      <div class="blog-card__img"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=75&auto=format&fit=crop" alt="Vinterdæk vs helårsdæk" width="600" height="360" loading="lazy"></div>
+      <div class="blog-card__body">
+        <div class="blog-card__cat">Dæk</div>
+        <div class="blog-card__title">Vinterdæk vs. helårsdæk — hvad er bedst?</div>
+        <div class="blog-card__excerpt">Et ærligt svar fra dit lokale autoværksted — inkl. pris og råd til din kørselsstil.</div>
+        <div class="blog-card__meta"><span>3. okt. 2024</span><span>·</span><span>6 min</span></div>
+        <div class="blog-card__cta">Læs artikel →</div>
+      </div>
+    </a>
+
+    <a href="/blog/hvad-koster-serviceeftersyn/" class="blog-card">
+      <div class="blog-card__img"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=600&q=75&auto=format&fit=crop" alt="Hvad koster serviceeftersyn" width="600" height="360" loading="lazy"></div>
+      <div class="blog-card__body">
+        <div class="blog-card__cat">Service</div>
+        <div class="blog-card__title">Hvad koster et serviceeftersyn i 2025?</div>
+        <div class="blog-card__excerpt">Overblik over priser, hvad der er inkluderet, og hvornår du bør booke dit næste serviceeftersyn.</div>
+        <div class="blog-card__meta"><span>8. feb. 2025</span><span>·</span><span>4 min</span></div>
+        <div class="blog-card__cta">Læs artikel →</div>
+      </div>
+    </a>
+
+    <a href="/blog/tegn-paa-tandrem-skal-skiftes/" class="blog-card">
+      <div class="blog-card__img"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=600&q=75&auto=format&fit=crop" alt="Tandrem skal skiftes" width="600" height="360" loading="lazy"></div>
+      <div class="blog-card__body">
+        <div class="blog-card__cat">Motor</div>
+        <div class="blog-card__title">5 tegn på at din tandrem skal skiftes</div>
+        <div class="blog-card__excerpt">En sprængt tandrem kan ødelægge din motor totalt. Her er hvad du skal kigge efter.</div>
+        <div class="blog-card__meta"><span>22. nov. 2024</span><span>·</span><span>5 min</span></div>
+        <div class="blog-card__cta">Læs artikel →</div>
+      </div>
+    </a>
+
+    <a href="/blog/saadan-laenger-du-bilens-levetid/" class="blog-card">
+      <div class="blog-card__img"><img src="https://images.unsplash.com/photo-1504222490345-c075b7c1b5a4?w=600&q=75&auto=format&fit=crop" alt="Forlæng bilens levetid" width="600" height="360" loading="lazy"></div>
+      <div class="blog-card__body">
+        <div class="blog-card__cat">Råd & Tips</div>
+        <div class="blog-card__title">Sådan forlænger du din bils levetid</div>
+        <div class="blog-card__excerpt">5 enkle tips til at spare penge på reparationer og holde din bil kørende i mange år.</div>
+        <div class="blog-card__meta"><span>5. mar. 2025</span><span>·</span><span>4 min</span></div>
+        <div class="blog-card__cta">Læs artikel →</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__grid">
+    <div><div class="footer__logo">Pro<span>Auto</span>Fix</div><p class="footer__desc">Lokalt autoværksted i Albertslund. Hurtig, ærlig og fair.</p><div class="footer__contact-item"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.5 11.5 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.5 11.5 0 00.58 3.6 1 1 0 01-.25 1.01l-2.21 2.18z"/></svg><a href="tel:+4500000000">+45 00 00 00 00</a></div><div class="footer__reviews" style="margin-top:24px;"><a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer" class="footer__review-badge"><span class="footer__stars">★★★★★</span><span><strong>4,8</strong> på Trustpilot</span></a></div></div>
+    <div><div class="footer__col-title">Ydelser</div><nav class="footer__links"><a href="/services/bremser/">Bremser</a><a href="/services/daekskifte/">Dækskifte</a><a href="/services/olieskift/">Olieskift</a><a href="/services/serviceeftersyn/">Serviceeftersyn</a></nav></div>
+    <div><div class="footer__col-title">Område</div><nav class="footer__links"><a href="/autovaerksted-albertslund/">Albertslund</a><a href="/autovaerksted-glostrup/">Glostrup</a><a href="/autovaerksted-taastrup/">Taastrup</a></nav></div>
+    <div><div class="footer__col-title">Info</div><nav class="footer__links"><a href="/om-os/">Om os</a><a href="/priser/">Prisberegner</a><a href="/book-tid/">Book tid</a></nav></div>
+  </div>
+  <div class="footer__bottom"><p>© 2025 ProAutoFix. CVR: [XXXXXXXX].</p><nav class="footer__legal"><a href="/privatlivspolitik/">Privatlivspolitik</a><a href="/cookiepolitik/">Cookiepolitik</a><a href="/handelsbetingelser/">Handelsbetingelser</a></nav></div>
+</footer>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true"><div class="cookie-banner__inner"><p>Vi bruger cookies. <a href="/cookiepolitik/">Læs mere</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
+<button class="cookie-settings-fab" id="cookieSettingsFab" aria-label="Tilpas cookies">🍪</button>
+<script src="/js/main.js"></script>
+</body>
+</html>

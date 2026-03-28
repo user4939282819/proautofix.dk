@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prisberegner – Hvad koster din bilreparation? | ProAutoFix Albertslund</title>
+  <meta name="description" content="Brug vores gratis prisberegner og få et øjeblikkeligt estimat på din bilreparation i Albertslund. Vælg bilmærke, problem og se prisen med det samme.">
+  <link rel="canonical" href="https://proautofix.dk/priser/">
+  <meta property="og:title" content="Prisberegner – ProAutoFix Albertslund">
+  <meta property="og:description" content="Gratis prisestimator for bilreparationer i Albertslund. Se hvad din reparation koster, inden du ringer.">
+  <meta property="og:url" content="https://proautofix.dk/priser/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Prisberegner – ProAutoFix",
+    "url": "https://proautofix.dk/priser/",
+    "description": "Gratis prisestimator for bilreparationer i Albertslund",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Forside","item":"https://proautofix.dk/"},
+        {"@type":"ListItem","position":2,"name":"Prisberegner","item":"https://proautofix.dk/priser/"}
+      ]
+    }
+  }
+  </script>
+  <style>
+    .calc-hero {
+      background: var(--black);
+      padding: 80px 0 60px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .calc-hero .breadcrumb {
+      font-size: 0.82rem;
+      color: var(--grey);
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+    .calc-hero .breadcrumb a { color: var(--grey); text-decoration: none; }
+    .calc-hero .breadcrumb a:hover { color: var(--red); }
+    .calc-hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+    .calc-hero h1 span { color: var(--red); }
+    .calc-hero p { color: var(--grey-light); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
+
+    .calc-section {
+      background: var(--black-light);
+      padding: 60px 0 80px;
+    }
+    .calc-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .calc-steps {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .calc-step-indicator {
+      flex: 1;
+      min-width: 100px;
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+    .calc-step-indicator.active { background: var(--red); }
+    .calc-step-indicator.done { background: rgba(220,38,38,0.4); }
+
+    .calc-card {
+      background: var(--black-card);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 40px;
+    }
+    .calc-step { display: none; }
+    .calc-step.active { display: block; }
+
+    .calc-step h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 8px;
+    }
+    .calc-step .step-num {
+      font-size: 0.78rem;
+      color: var(--red);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .calc-step p { color: var(--grey-light); margin-bottom: 28px; font-size: 0.95rem; }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .calc-grid.wide { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+
+    .calc-option {
+      background: rgba(255,255,255,0.04);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .calc-option:hover { border-color: var(--red); background: rgba(220,38,38,0.08); }
+    .calc-option.selected { border-color: var(--red); background: rgba(220,38,38,0.15); color: var(--white); }
+    .calc-option .opt-icon { font-size: 1.5rem; margin-bottom: 6px; display: block; }
+    .calc-option .opt-label { font-size: 0.85rem; font-weight: 600; }
+    .calc-option .opt-sub { font-size: 0.75rem; color: var(--grey); margin-top: 3px; }
+
+    .calc-nav {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .calc-nav .btn-back {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--grey-light);
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .calc-nav .btn-back:hover { border-color: var(--white); color: var(--white); }
+
+    /* Result Card */
+    .result-card {
+      background: linear-gradient(135deg, rgba(220,38,38,0.12) 0%, rgba(220,38,38,0.04) 100%);
+      border: 1px solid rgba(220,38,38,0.3);
+      border-radius: 12px;
+      padding: 36px;
+      margin-bottom: 24px;
+    }
+    .result-card .result-label {
+      font-size: 0.82rem;
+      color: var(--grey);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .result-card .result-service {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .result-card .result-car { color: var(--grey-light); font-size: 0.92rem; margin-bottom: 24px; }
+    .result-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .result-price-row:last-child { border-bottom: none; }
+    .result-price-row .row-label { color: var(--grey-light); font-size: 0.9rem; }
+    .result-price-row .row-val { font-weight: 600; font-size: 0.95rem; }
+    .result-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px solid rgba(220,38,38,0.4);
+    }
+    .result-total .total-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .result-total .total-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--red);
+    }
+    .result-disclaimer {
+      font-size: 0.78rem;
+      color: var(--grey);
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+    .result-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .result-actions .btn { flex: 1; min-width: 160px; text-align: center; justify-content: center; }
+    .btn-reset {
+      width: 100%;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--grey-light);
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.85rem;
+      margin-top: 16px;
+      transition: all 0.2s;
+    }
+    .btn-reset:hover { border-color: var(--white); color: var(--white); }
+
+    .info-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+    .info-box h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .info-box ul { list-style: none; padding: 0; margin: 0; }
+    .info-box ul li { padding: 6px 0; color: var(--grey-light); font-size: 0.88rem; padding-left: 20px; position: relative; }
+    .info-box ul li::before { content: "✓"; position: absolute; left: 0; color: var(--red); }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Primær navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="ProAutoFix forside">
+      Pro<span>Auto</span>Fix
+    </a>
+    <div class="nav__links">
+      <a href="/services/">Ydelser</a>
+      <a href="/priser/" aria-current="page">Prisberegner</a>
+      <a href="/blog/">Blog</a>
+      <a href="/om-os/">Om os</a>
+    </div>
+    <div class="nav__cta">
+      <a href="tel:+4500000000" class="nav__phone">+45 00 00 00 00</a>
+      <a href="/book-tid/" class="btn btn-primary">Book tid</a>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-expanded="false" aria-label="Åbn menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile" role="navigation" aria-label="Mobil navigation">
+  <a href="/services/">Ydelser</a>
+  <a href="/priser/">Prisberegner</a>
+  <a href="/blog/">Blog</a>
+  <a href="/om-os/">Om os</a>
+  <a href="/kontakt/">Kontakt din mekaniker</a>
+  <a href="/book-tid/" style="color: var(--red);">Book tid →</a>
+</div>
+
+<section class="calc-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Forside</a> › Prisberegner</div>
+    <h1>Hvad koster din <span>reparation?</span></h1>
+    <p>Vælg dit bilmærke og problemet — og få et øjeblikkeligt prisestimat. Herefter kan du booke tid eller ringe til os.</p>
+  </div>
+</section>
+
+<section class="calc-section">
+  <div class="calc-wrapper">
+
+    <div class="calc-steps">
+      <div class="calc-step-indicator active" id="ind-0"></div>
+      <div class="calc-step-indicator" id="ind-1"></div>
+      <div class="calc-step-indicator" id="ind-2"></div>
+      <div class="calc-step-indicator" id="ind-3"></div>
+    </div>
+
+    <div class="calc-card">
+
+      <!-- Step 0: Car brand -->
+      <div class="calc-step active" id="step-0">
+        <div class="step-num">Trin 1 af 3</div>
+        <h2>Vælg dit <span style="color:var(--red)">bilmærke</span></h2>
+        <p>Vi reparerer de fleste almindelige bilmærker — ikke eksklusive fabriksgaranti-biler.</p>
+        <div class="calc-grid" id="brand-grid">
+          <div class="calc-option" data-brand="Toyota"><span class="opt-icon">🚗</span><div class="opt-label">Toyota</div></div>
+          <div class="calc-option" data-brand="Volkswagen"><span class="opt-icon">🚗</span><div class="opt-label">Volkswagen</div></div>
+          <div class="calc-option" data-brand="Ford"><span class="opt-icon">🚗</span><div class="opt-label">Ford</div></div>
+          <div class="calc-option" data-brand="Opel"><span class="opt-icon">🚗</span><div class="opt-label">Opel</div></div>
+          <div class="calc-option" data-brand="Peugeot"><span class="opt-icon">🚗</span><div class="opt-label">Peugeot</div></div>
+          <div class="calc-option" data-brand="Renault"><span class="opt-icon">🚗</span><div class="opt-label">Renault</div></div>
+          <div class="calc-option" data-brand="Citroën"><span class="opt-icon">🚗</span><div class="opt-label">Citroën</div></div>
+          <div class="calc-option" data-brand="Skoda"><span class="opt-icon">🚗</span><div class="opt-label">Skoda</div></div>
+          <div class="calc-option" data-brand="Nissan"><span class="opt-icon">🚗</span><div class="opt-label">Nissan</div></div>
+          <div class="calc-option" data-brand="Hyundai"><span class="opt-icon">🚗</span><div class="opt-label">Hyundai</div></div>
+          <div class="calc-option" data-brand="Kia"><span class="opt-icon">🚗</span><div class="opt-label">Kia</div></div>
+          <div class="calc-option" data-brand="Mazda"><span class="opt-icon">🚗</span><div class="opt-label">Mazda</div></div>
+          <div class="calc-option" data-brand="Seat"><span class="opt-icon">🚗</span><div class="opt-label">Seat</div></div>
+          <div class="calc-option" data-brand="Honda"><span class="opt-icon">🚗</span><div class="opt-label">Honda</div></div>
+          <div class="calc-option" data-brand="Fiat"><span class="opt-icon">🚗</span><div class="opt-label">Fiat</div></div>
+          <div class="calc-option" data-brand="Andet"><span class="opt-icon">🔧</span><div class="opt-label">Andet</div></div>
+        </div>
+      </div>
+
+      <!-- Step 1: Car age -->
+      <div class="calc-step" id="step-1">
+        <div class="step-num">Trin 2 af 3</div>
+        <h2>Hvornår er bilen <span style="color:var(--red)">fra?</span></h2>
+        <p>Bilens alder påvirker prisen på reservedele.</p>
+        <div class="calc-grid wide" id="age-grid">
+          <div class="calc-option" data-age="old" data-age-mult="0.9">
+            <span class="opt-icon">🕰️</span>
+            <div class="opt-label">Før 2005</div>
+            <div class="opt-sub">Ældre bil</div>
+          </div>
+          <div class="calc-option" data-age="mid" data-age-mult="1.0">
+            <span class="opt-icon">🚙</span>
+            <div class="opt-label">2005–2015</div>
+            <div class="opt-sub">Typisk brugt bil</div>
+          </div>
+          <div class="calc-option" data-age="newer" data-age-mult="1.15">
+            <span class="opt-icon">🚘</span>
+            <div class="opt-label">2016–2020</div>
+            <div class="opt-sub">Nyere brugt bil</div>
+          </div>
+          <div class="calc-option" data-age="new" data-age-mult="1.0">
+            <span class="opt-icon">⚠️</span>
+            <div class="opt-label">Efter 2020</div>
+            <div class="opt-sub">Kontakt os først</div>
+          </div>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goStep(0)">← Tilbage</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Service type -->
+      <div class="calc-step" id="step-2">
+        <div class="step-num">Trin 3 af 3</div>
+        <h2>Hvad skal der <span style="color:var(--red)">laves?</span></h2>
+        <p>Vælg den ydelse, du har brug for.</p>
+        <div class="calc-grid wide" id="service-grid">
+          <div class="calc-option" data-service="Bremser foran" data-base-low="1200" data-base-high="1800">
+            <span class="opt-icon">🛞</span>
+            <div class="opt-label">Bremser foran</div>
+            <div class="opt-sub">Klodser + skiver</div>
+          </div>
+          <div class="calc-option" data-service="Bremser bagpå" data-base-low="1100" data-base-high="1700">
+            <span class="opt-icon">🛞</span>
+            <div class="opt-label">Bremser bagpå</div>
+            <div class="opt-sub">Klodser + tromler</div>
+          </div>
+          <div class="calc-option" data-service="Dækskifte (alle 4)" data-base-low="400" data-base-high="700">
+            <span class="opt-icon">🔄</span>
+            <div class="opt-label">Dækskifte (4 dæk)</div>
+            <div class="opt-sub">Montering + afbalancering</div>
+          </div>
+          <div class="calc-option" data-service="Olieskift" data-base-low="600" data-base-high="950">
+            <span class="opt-icon">🛢️</span>
+            <div class="opt-label">Olieskift</div>
+            <div class="opt-sub">Inkl. filter</div>
+          </div>
+          <div class="calc-option" data-service="Fjedre (par)" data-base-low="1800" data-base-high="2800">
+            <span class="opt-icon">🔩</span>
+            <div class="opt-label">Fjedre (par)</div>
+            <div class="opt-sub">Forreste eller bagreste</div>
+          </div>
+          <div class="calc-option" data-service="Støddæmpere (par)" data-base-low="2200" data-base-high="3500">
+            <span class="opt-icon">⚙️</span>
+            <div class="opt-label">Støddæmpere (par)</div>
+            <div class="opt-sub">Inkl. montering</div>
+          </div>
+          <div class="calc-option" data-service="Serviceeftersyn" data-base-low="800" data-base-high="1400">
+            <span class="opt-icon">🔍</span>
+            <div class="opt-label">Serviceeftersyn</div>
+            <div class="opt-sub">Komplet gennemgang</div>
+          </div>
+          <div class="calc-option" data-service="Klargøring til syn" data-base-low="700" data-base-high="1100">
+            <span class="opt-icon">✅</span>
+            <div class="opt-label">Klargøring til syn</div>
+            <div class="opt-sub">Fejlfri syn-klar</div>
+          </div>
+          <div class="calc-option" data-service="Tandrem udskiftning" data-base-low="2500" data-base-high="4200">
+            <span class="opt-icon">⛓️</span>
+            <div class="opt-label">Tandrem</div>
+            <div class="opt-sub">Inkl. vandpumpe</div>
+          </div>
+          <div class="calc-option" data-service="Styretøj justering" data-base-low="800" data-base-high="1400">
+            <span class="opt-icon">🎯</span>
+            <div class="opt-label">Styretøj</div>
+            <div class="opt-sub">Udmåling + justering</div>
+          </div>
+          <div class="calc-option" data-service="Aircondition service" data-base-low="700" data-base-high="1100">
+            <span class="opt-icon">❄️</span>
+            <div class="opt-label">Aircondition</div>
+            <div class="opt-sub">Rengøring + fyldning</div>
+          </div>
+          <div class="calc-option" data-service="Udstødning reparation" data-base-low="900" data-base-high="2200">
+            <span class="opt-icon">💨</span>
+            <div class="opt-label">Udstødning</div>
+            <div class="opt-sub">Reparation + skift</div>
+          </div>
+        </div>
+        <div class="calc-nav">
+          <button class="btn-back" onclick="goStep(1)">← Tilbage</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Result -->
+      <div class="calc-step" id="step-3">
+        <div class="step-num">Dit prisestimat</div>
+        <h2>Her er dit <span style="color:var(--red)">estimat</span></h2>
+
+        <div class="result-card">
+          <div class="result-label">Valgt ydelse</div>
+          <div class="result-service" id="res-service">—</div>
+          <div class="result-car" id="res-car">—</div>
+          <div class="result-price-row">
+            <span class="row-label">Arbejdsløn (estimeret)</span>
+            <span class="row-val" id="res-labor">—</span>
+          </div>
+          <div class="result-price-row">
+            <span class="row-label">Reservedele (estimeret)</span>
+            <span class="row-val" id="res-parts">—</span>
+          </div>
+          <div class="result-price-row">
+            <span class="row-label">Moms (25%)</span>
+            <span class="row-val" id="res-vat">—</span>
+          </div>
+          <div class="result-total">
+            <span class="total-label">Samlet estimat (inkl. moms)</span>
+            <span class="total-price" id="res-total">—</span>
+          </div>
+          <div class="result-disclaimer">
+            * Estimater er vejledende og kan variere afhængigt af din bils tilstand, konkrete reservedele og arbejdets omfang. Kontakt os for en præcis pris.
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <a href="/book-tid/" class="btn btn-primary">Book tid nu</a>
+          <a href="tel:+4500000000" class="btn btn-secondary">Ring: +45 00 00 00 00</a>
+        </div>
+        <button class="btn-reset" onclick="resetCalc()">← Beregn igen</button>
+      </div>
+
+    </div><!-- /.calc-card -->
+
+    <div class="info-box">
+      <h3>Derfor vælger Albertslund-borgere ProAutoFix</h3>
+      <ul>
+        <li>Fair og gennemsigtige priser — ingen skjulte gebyrer</li>
+        <li>Hurtig service — oftest klar samme dag eller næste dag</li>
+        <li>Vi specialiserer os i brugte hverdagsbiler, ikke luksusbiler</li>
+        <li>10+ års erfaring med de fleste europæiske bilmærker</li>
+        <li>Gratis råd og gennemgang inden vi starter arbejdet</li>
+        <li>Centralt beliggende i Albertslund med god parkering</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo">Pro<span>Auto</span>Fix</div>
+      <p class="footer__desc">Lokalt autoværksted i Albertslund med speciale i bremser, dæk, olieskift og service. Hurtig, ærlig og fair.</p>
+      <div class="footer__contact-item">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.5 11.5 0 003.6.58 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.5 11.5 0 00.58 3.6 1 1 0 01-.25 1.01l-2.21 2.18z"/></svg>
+        <a href="tel:+4500000000">+45 00 00 00 00</a>
+      </div>
+      <div class="footer__reviews" style="margin-top:24px;">
+        <a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer" class="footer__review-badge"><span class="footer__stars">★★★★★</span><span><strong>4,8</strong> på Trustpilot</span></a>
+        <a href="https://g.co/kgs/PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="footer__review-badge"><span class="footer__stars">★★★★★</span><span><strong>4,9</strong> på Google</span></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Ydelser</div>
+      <nav class="footer__links">
+        <a href="/services/bremser/">Bremser & Bremseskiver</a>
+        <a href="/services/daekskifte/">Dækskifte</a>
+        <a href="/services/olieskift/">Olieskift</a>
+        <a href="/services/serviceeftersyn/">Serviceeftersyn</a>
+        <a href="/services/tandrem/">Tandrem</a>
+        <a href="/services/">Se alle ydelser</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer__col-title">Område</div>
+      <nav class="footer__links">
+        <a href="/autovaerksted-albertslund/">Albertslund</a>
+        <a href="/autovaerksted-glostrup/">Glostrup</a>
+        <a href="/autovaerksted-taastrup/">Taastrup</a>
+        <a href="/autovaerksted-hedehusene/">Hedehusene</a>
+        <a href="/autovaerksted-ishoj/">Ishøj</a>
+        <a href="/autovaerksted-vallensbek/">Vallensbæk</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer__col-title">Virksomhed</div>
+      <nav class="footer__links">
+        <a href="/om-os/">Om os</a>
+        <a href="/book-tid/">Book tid</a>
+        <a href="/kontakt/">Kontakt</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+      <div class="footer__col-title" style="margin-top:28px;">Åbningstider</div>
+      <div style="font-size:0.88rem;color:var(--grey-light);line-height:1.8;">
+        <div>Man–Fre: 08:00–17:00</div>
+        <div>Lørdag: 09:00–13:00</div>
+        <div style="color:var(--grey);">Søndag: Lukket</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 ProAutoFix. CVR: [XXXXXXXX]. Alle rettigheder forbeholdes.</p>
+    <nav class="footer__legal">
+      <a href="/privatlivspolitik/">Privatlivspolitik</a>
+      <a href="/cookiepolitik/">Cookiepolitik</a>
+      <a href="/handelsbetingelser/">Handelsbetingelser</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- Cookie banner (same as homepage) -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
+  <div class="cookie-banner__inner">
+    <p>Vi bruger cookies for at forbedre din oplevelse. Læs mere i vores <a href="/cookiepolitik/">cookiepolitik</a>.</p>
+    <div class="cookie-banner__actions">
+      <button class="cookie-btn cookie-btn--settings" data-cookie-settings>Tilpas</button>
+      <button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button>
+      <button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button>
+    </div>
+  </div>
+</div>
+<button class="cookie-settings-fab" id="cookieSettingsFab" aria-label="Tilpas cookie indstillinger" title="Tilpas cookies">🍪</button>
+
+<script src="/js/main.js"></script>
+<script>
+  let selectedBrand = null;
+  let selectedAgeMult = 1.0;
+  let selectedAgeLabel = '';
+
+  function goStep(n) {
+    document.querySelectorAll('.calc-step').forEach((s,i) => {
+      s.classList.toggle('active', i === n);
+    });
+    document.querySelectorAll('.calc-step-indicator').forEach((el, i) => {
+      el.classList.toggle('active', i === n);
+      el.classList.toggle('done', i < n);
+    });
+    window.scrollTo({top: document.querySelector('.calc-section').offsetTop - 80, behavior: 'smooth'});
+  }
+
+  function resetCalc() {
+    selectedBrand = null;
+    selectedAgeMult = 1.0;
+    document.querySelectorAll('.calc-option').forEach(el => el.classList.remove('selected'));
+    goStep(0);
+  }
+
+  // Step 0: Brand selection
+  document.querySelectorAll('#brand-grid .calc-option').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('#brand-grid .calc-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedBrand = el.dataset.brand;
+      setTimeout(() => goStep(1), 280);
+    });
+  });
+
+  // Step 1: Age selection
+  document.querySelectorAll('#age-grid .calc-option').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('#age-grid .calc-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedAgeMult = parseFloat(el.dataset.ageMult);
+      selectedAgeLabel = el.querySelector('.opt-label').textContent;
+      setTimeout(() => goStep(2), 280);
+    });
+  });
+
+  // Step 2: Service selection → show result
+  document.querySelectorAll('#service-grid .calc-option').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('#service-grid .calc-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+
+      const service = el.dataset.service;
+      const baseLow = parseInt(el.dataset.baseLow) * selectedAgeMult;
+      const baseHigh = parseInt(el.dataset.baseHigh) * selectedAgeMult;
+
+      const laborShare = 0.45;
+      const partsShare = 0.55;
+
+      const low = Math.round(baseLow / 100) * 100;
+      const high = Math.round(baseHigh / 100) * 100;
+
+      const laborLow = Math.round(low * laborShare / 100) * 100;
+      const laborHigh = Math.round(high * laborShare / 100) * 100;
+      const partsLow = Math.round(low * partsShare / 100) * 100;
+      const partsHigh = Math.round(high * partsShare / 100) * 100;
+      const vatLow = Math.round((low * 0.25) / 50) * 50;
+      const vatHigh = Math.round((high * 0.25) / 50) * 50;
+      const totalLow = low + Math.round(low * 0.25 / 50) * 50;
+      const totalHigh = high + Math.round(high * 0.25 / 50) * 50;
+
+      document.getElementById('res-service').textContent = service;
+      document.getElementById('res-car').textContent = `${selectedBrand} · ${selectedAgeLabel}`;
+      document.getElementById('res-labor').textContent = `${laborLow.toLocaleString('da-DK')} – ${laborHigh.toLocaleString('da-DK')} kr.`;
+      document.getElementById('res-parts').textContent = `${partsLow.toLocaleString('da-DK')} – ${partsHigh.toLocaleString('da-DK')} kr.`;
+      document.getElementById('res-vat').textContent = `${vatLow.toLocaleString('da-DK')} – ${vatHigh.toLocaleString('da-DK')} kr.`;
+      document.getElementById('res-total').textContent = `${totalLow.toLocaleString('da-DK')} – ${totalHigh.toLocaleString('da-DK')} kr.`;
+
+      setTimeout(() => goStep(3), 300);
+    });
+  });
+</script>
+</body>
+</html>
