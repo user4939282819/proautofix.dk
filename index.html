@@ -267,7 +267,7 @@
 
       <a href="/services/bremser/" class="service-card fade-in" aria-label="Bremser og bremseskiver">
         <div class="service-card__img">
-          <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=600&q=75&auto=format&fit=crop" alt="Bremseskiver og bremseservice" width="600" height="338" loading="lazy">
+          <img src="/images/img-daekskifte.jpg" alt="Bremseskiver og bremseservice" width="600" height="338" loading="lazy">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Populær ydelse</div>
@@ -279,7 +279,7 @@
 
       <a href="/services/daekskifte/" class="service-card fade-in" aria-label="Dækskifte og hjulskifte">
         <div class="service-card__img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75&auto=format&fit=crop" alt="Dækskifte og hjulmontering" width="600" height="338" loading="lazy">
+          <img src="/images/img-aircon.jpg" alt="Dækskifte og hjulmontering" width="600" height="338" loading="lazy">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Sæsonservice</div>
@@ -291,7 +291,7 @@
 
       <a href="/services/olieskift/" class="service-card fade-in" aria-label="Olieskift">
         <div class="service-card__img">
-          <img src="https://images.unsplash.com/photo-1615829386703-2b4e1c3b7b5f?w=600&q=75&auto=format&fit=crop" alt="Olieskift og oliefilter" width="600" height="338" loading="lazy">
+          <img src="/images/img-serviceeftersyn.jpg" alt="Olieskift og oliefilter" width="600" height="338" loading="lazy">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Fast ydelse</div>
@@ -576,90 +576,23 @@
         Centralt beliggende i Albertslund — nem at komme til fra hele oplandet.
       </p>
     </div>
-    <style>
-      .area-card{position:relative;border-radius:12px;overflow:hidden;text-decoration:none;display:block;min-height:160px;border:1px solid rgba(255,255,255,0.08);transition:transform .25s,border-color .25s;}
+        <style>
+      .area-card{position:relative;border-radius:12px;text-decoration:none;display:block;min-height:140px;background:var(--black-card);border:1px solid rgba(255,255,255,0.08);transition:transform .25s,border-color .25s;}
       .area-card:hover{transform:translateY(-3px);border-color:rgba(220,38,38,0.5);}
-      .area-card__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s;}
-      .area-card:hover .area-card__img{transform:scale(1.06);}
-      .area-card__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.25) 100%);}
-      .area-card__body{position:relative;z-index:2;padding:20px 16px;display:flex;flex-direction:column;justify-content:flex-end;min-height:160px;}
-      .area-card__badge{font-size:.7rem;color:var(--red);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
-      .area-card__name{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:3px;}
-      .area-card__dist{font-size:.78rem;color:rgba(255,255,255,0.65);}
+      .area-card__body{padding:24px 20px;display:flex;flex-direction:column;justify-content:center;min-height:140px;}
+      .area-card__badge{font-size:.7rem;color:var(--red);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+      .area-card__name{font-family:"Barlow Condensed",sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:4px;}
+      .area-card__dist{font-size:.8rem;color:rgba(255,255,255,0.5);}
     </style>
     <div class="grid-4" style="gap:16px;">
-      <a href="/autovaerksted-albertslund/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1558618047-f4e90e8a9e97?w=600&q=70&auto=format&fit=crop" alt="Albertslund centrum" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">Vores hjem</div>
-          <div class="area-card__name">Albertslund</div>
-          <div class="area-card__dist">2620 · Rydagervej 6</div>
-        </div>
-      </a>
-      <a href="/autovaerksted-glostrup/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=70&auto=format&fit=crop" alt="Glostrup vej" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">5 min. kørsel</div>
-          <div class="area-card__name">Glostrup</div>
-          <div class="area-card__dist">Ring 3 · 2600</div>
-        </div>
-      </a>
-      <a href="/autovaerksted-taastrup/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1445294211564-3ca59d999abd?w=600&q=70&auto=format&fit=crop" alt="Taastrup vej" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">10 min. kørsel</div>
-          <div class="area-card__name">Taastrup</div>
-          <div class="area-card__dist">Køge Bugt · 2630</div>
-        </div>
-      </a>
-      <a href="/autovaerksted-hedehusene/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=70&auto=format&fit=crop" alt="Hedehusene natur" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">12 min. kørsel</div>
-          <div class="area-card__name">Hedehusene</div>
-          <div class="area-card__dist">Hedeland · 2640</div>
-        </div>
-      </a>
-      <a href="/autovaerksted-ishoj/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=70&auto=format&fit=crop" alt="Ishøj strand" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">10 min. kørsel</div>
-          <div class="area-card__name">Ishøj</div>
-          <div class="area-card__dist">Strandparken · 2635</div>
-        </div>
-      </a>
-      <a href="/autovaerksted-vallensbek/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=70&auto=format&fit=crop" alt="Vallensbæk sø" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">8 min. kørsel</div>
-          <div class="area-card__name">Vallensbæk</div>
-          <div class="area-card__dist">Vallensbæk Sø · 2665</div>
-        </div>
-      </a>
-      <a href="/autovaerksted-herstedvester/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1471421291049-9e44e55b0b41?w=600&q=70&auto=format&fit=crop" alt="Herstedvester motorvej" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">5 min. kørsel</div>
-          <div class="area-card__name">Herstedvester</div>
-          <div class="area-card__dist">Motorring 3 · 2620</div>
-        </div>
-      </a>
-      <a href="/autovaerksted-broendby/" class="area-card">
-        <img class="area-card__img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70&auto=format&fit=crop" alt="Brøndby vej" loading="lazy">
-        <div class="area-card__overlay"></div>
-        <div class="area-card__body">
-          <div class="area-card__badge">10 min. kørsel</div>
-          <div class="area-card__name">Brøndby</div>
-          <div class="area-card__dist">Brøndby Strand · 2660</div>
-        </div>
-      </a>
+      <a href="/autovaerksted-albertslund/" class="area-card"><div class="area-card__body"><div class="area-card__badge">Vores hjem</div><div class="area-card__name">Albertslund</div><div class="area-card__dist">2620 &middot; Rydagervej 6</div></div></a>
+      <a href="/autovaerksted-glostrup/" class="area-card"><div class="area-card__body"><div class="area-card__badge">5 min. k&oslash;rsel</div><div class="area-card__name">Glostrup</div><div class="area-card__dist">Ring 3 &middot; 2600</div></div></a>
+      <a href="/autovaerksted-taastrup/" class="area-card"><div class="area-card__body"><div class="area-card__badge">10 min. k&oslash;rsel</div><div class="area-card__name">Taastrup</div><div class="area-card__dist">K&oslash;ge Bugt &middot; 2630</div></div></a>
+      <a href="/autovaerksted-hedehusene/" class="area-card"><div class="area-card__body"><div class="area-card__badge">12 min. k&oslash;rsel</div><div class="area-card__name">Hedehusene</div><div class="area-card__dist">Hedeland &middot; 2640</div></div></a>
+      <a href="/autovaerksted-ishoj/" class="area-card"><div class="area-card__body"><div class="area-card__badge">10 min. k&oslash;rsel</div><div class="area-card__name">Ish&oslash;j</div><div class="area-card__dist">Strandparken &middot; 2635</div></div></a>
+      <a href="/autovaerksted-vallensbek/" class="area-card"><div class="area-card__body"><div class="area-card__badge">8 min. k&oslash;rsel</div><div class="area-card__name">Vallensb&aelig;k</div><div class="area-card__dist">Vallensb&aelig;k S&oslash; &middot; 2665</div></div></a>
+      <a href="/autovaerksted-herstedvester/" class="area-card"><div class="area-card__body"><div class="area-card__badge">5 min. k&oslash;rsel</div><div class="area-card__name">Herstedvester</div><div class="area-card__dist">Motorring 3 &middot; 2620</div></div></a>
+      <a href="/autovaerksted-broendby/" class="area-card"><div class="area-card__body"><div class="area-card__badge">10 min. k&oslash;rsel</div><div class="area-card__name">Br&oslash;ndby</div><div class="area-card__dist">Br&oslash;ndby Strand &middot; 2660</div></div></a>
     </div>
   </div>
 </section>
