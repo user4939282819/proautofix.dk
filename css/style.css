@@ -341,7 +341,7 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
   transition: border-color 0.2s;
 }
 .footer__review-badge:hover { border-color: var(--red); color: var(--white); }
-.footer__stars { color: #fbbf24; font-size: 0.9rem; }
+.footer__stars { color: #00b67a; font-size: 0.9rem; }
 .footer__bottom {
   max-width: var(--max-w);
   margin: 0 auto;
