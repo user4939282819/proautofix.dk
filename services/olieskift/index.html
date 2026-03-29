@@ -17,7 +17,7 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <noscript><link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript></noscript>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Olieskift & Oliefilter i Albertslund", "url": "https://proautofix.dk/services/olieskift/", "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://proautofix.dk/"}, {"@type": "ListItem", "position": 2, "name": "Ydelser", "item": "https://proautofix.dk/services/"}, {"@type": "ListItem", "position": 3, "name": "Olieskift Albertslund", "item": "https://proautofix.dk/services/olieskift/"}]}, "mainEntity": {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hvornår skal jeg skifte olie på min bil?", "acceptedAnswer": {"@type": "Answer", "text": "De fleste moderne biler anbefaler olieskift hvert 15.000–20.000 km eller én gang om året — hvad der kommer først. Kører du meget korte ture i byen, slid- og stortrafik eller i ekstrem kulde, bør du skifte oftere — typisk hvert 10.000 km. Se altid din bils servicebog for præcis anbefaling."}}, {"@type": "Question", "name": "Hvilken olietype bruger I?", "acceptedAnswer": {"@type": "Answer", "text": "Vi bruger altid den olietype og viskositet der er specificeret af bilproducenten til din specifikke model og motortype. Det kan være 5W-30, 5W-40, 0W-20 eller andet. Vi henter specifikationen direkte fra vores database baseret på dit registreringsnummer."}}, {"@type": "Question", "name": "Kan jeg skifte til en billigere olie end fabrikantens anbefaling?", "acceptedAnswer": {"@type": "Answer", "text": "Vi anbefaler det ikke. Forkert olietype kan øge motorslid, reducere oliens smøreevne og i værste fald gøre din fabriksgaranti ugyldig. Prisdifferencen mellem korrekt og forkert olie er minimal sammenlignet med risikoen."}}, {"@type": "Question", "name": "Hvad sker der hvis jeg ikke skifter olie til tiden?", "acceptedAnswer": {"@type": "Answer", "text": "Gammel motorolie mister sine smørende egenskaber, bliver tyktflydende og ophober sod og metalliske partikler. Det fører til øget motorslid, højere temperatur, øget brændstofforbrug og i yderste konsekvens motorhavari — en reparation der let koster 20.000–60.000 kr."}}, {"@type": "Question", "name": "Hvad er inkluderet i et olieskift hos ProAutoFix?", "acceptedAnswer": {"@type": "Answer", "text": "Inkluderet er: aftapning af gammel olie, udskiftning af oliefilter, påfyldning af korrekt olietype og mængde, kontrol af alle væskestande (kølevand, bremse, sprinklervæske), nulstilling af serviceindikatoren og bortskaffelse af gammel olie."}}, {"@type": "Question", "name": "Kan jeg køre med et olieskift der er overskredet?", "acceptedAnswer": {"@type": "Answer", "text": "Det er muligt, men det øger risikoen for motorskade for hvert kilometer du kører. Motorolie nedbrydes over tid — selv uden kørsel. Vi anbefaler at booke et olieskift hurtigst muligt, helst inden du kører mere end 2.000 km over intervallet."}}]}}</script>
   <style>
@@ -25,11 +25,11 @@
     .svc-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;}
     .svc-hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--black) 40%,rgba(0,0,0,0.3) 100%);}
     .svc-hero__content{position:relative;z-index:2;width:100%;padding:60px 20px 50px;max-width:960px;margin:0 auto;}
-    .breadcrumb{font-size:.82rem;color:var(--grey);margin-bottom:16px;letter-spacing:.04em;}
-    .breadcrumb a{color:var(--grey);text-decoration:none;}
-    .breadcrumb a:hover{color:var(--red);}
+    .breadcrumb{font-size:.82rem;color:#b3b3b3;margin-bottom:16px;letter-spacing:.04em;}
+    .breadcrumb a{color:#b3b3b3;text-decoration:none;}
+    .breadcrumb a:hover{color:#ef4444;}
     .svc-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;line-height:1.05;}
-    .svc-hero h1 span{color:var(--red);}
+    .svc-hero h1 span{color:#ef4444;}
     .svc-hero p{color:var(--grey-light);max-width:580px;font-size:1.05rem;line-height:1.6;}
     .svc-body{background:var(--black-light);padding:60px 0 80px;}
     .svc-grid{display:grid;grid-template-columns:1fr 300px;gap:48px;max-width:960px;margin:0 auto;padding:0 20px;}
@@ -40,8 +40,8 @@
     .svc-content p{color:var(--grey-light);line-height:1.8;margin-bottom:16px;font-size:.95rem;}
     .svc-content ul{color:var(--grey-light);padding-left:0;list-style:none;margin-bottom:20px;}
     .svc-content ul li{padding:6px 0 6px 22px;position:relative;font-size:.92rem;line-height:1.6;}
-    .svc-content ul li::before{content:"✓";position:absolute;left:0;color:var(--red);font-weight:700;}
-    .svc-content a{color:var(--red);}
+    .svc-content ul li::before{content:"✓";position:absolute;left:0;color:#ef4444;font-weight:700;}
+    .svc-content a{color:#ef4444;}
     .price-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.88rem;}
     .price-table th{background:rgba(220,38,38,0.15);color:var(--white);padding:10px 14px;text-align:left;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:.85rem;}
     .price-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.06);color:var(--grey-light);}
@@ -56,11 +56,11 @@
     .faq-a.open{display:block;}
     .sidebar-card{background:var(--black-card);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;margin-bottom:20px;}
     .sidebar-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;margin-bottom:16px;}
-    .sidebar-card .price-est{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--red);margin-bottom:4px;}
-    .sidebar-card .price-note{font-size:.78rem;color:var(--grey);margin-bottom:20px;}
+    .sidebar-card .price-est{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:#ef4444;margin-bottom:4px;}
+    .sidebar-card .price-note{font-size:.78rem;color:#b3b3b3;margin-bottom:20px;}
     .related-link{display:block;padding:10px 0;color:var(--grey-light);text-decoration:none;font-size:.88rem;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .2s;}
     .related-link:last-child{border-bottom:none;}
-    .related-link:hover{color:var(--red);}
+    .related-link:hover{color:#ef4444;}
     .cta-banner{background:var(--red);border-radius:12px;padding:28px;margin-top:40px;text-align:center;}
     .cta-banner h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;}
     .cta-banner p{font-size:.88rem;margin-bottom:16px;opacity:.9;}
@@ -78,7 +78,7 @@
 <div class="nav__mobile" id="navMobile">
   <a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a>
   <a href="/om-os/">Om os</a><a href="/kontakt/">Kontakt</a>
-  <a href="/book-tid/" style="color:var(--red);">Book tid →</a>
+  <a href="/book-tid/" style="color:#ef4444;">Book tid →</a>
 </div>
 <section class="svc-hero" aria-label="Olieskift & Oliefilter i Albertslund">
   <img class="svc-hero__img" src="/images/img-olieskift.jpg" alt="Olieskift og oliefilter hos ProAutoFix i Albertslund" width="1600" height="900" loading="eager" fetchpriority="high">
@@ -179,7 +179,7 @@
   <div class="sidebar-card">
     <h3>Find os</h3>
     <p style="font-size:.85rem;color:var(--grey-light);margin-bottom:8px;">Rydagervej 6<br>2620 Albertslund</p>
-    <p style="font-size:.82rem;color:var(--grey);">Man–Fre 08–17 · Lør 09–13</p>
+    <p style="font-size:.82rem;color:#b3b3b3;">Man–Fre 08–17 · Lør 09–13</p>
     <a href="https://maps.google.com/?q=Rydagervej+6,+2620+Albertslund" target="_blank" rel="noopener" class="related-link" style="margin-top:8px;">Åbn i Google Maps →</a>
   </div>
 </aside>
@@ -251,7 +251,7 @@
     </nav>
   </div>
 </footer>
-<div class="cookie-banner show" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
   <div class="cookie-banner__inner">
     <p>Vi bruger cookies for at forbedre din oplevelse og analysere vores trafik. Læs mere i vores <a href="/cookiepolitik/">cookiepolitik</a>.</p>
     <div class="cookie-banner__actions">

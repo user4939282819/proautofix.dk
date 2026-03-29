@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <script type="application/ld+json">
   {
@@ -41,12 +41,12 @@
     }
     .calc-hero .breadcrumb {
       font-size: 0.82rem;
-      color: var(--grey);
+      color: #b3b3b3;
       margin-bottom: 20px;
       letter-spacing: 0.04em;
     }
-    .calc-hero .breadcrumb a { color: var(--grey); text-decoration: none; }
-    .calc-hero .breadcrumb a:hover { color: var(--red); }
+    .calc-hero .breadcrumb a { color: #b3b3b3; text-decoration: none; }
+    .calc-hero .breadcrumb a:hover { color: #ef4444; }
     .calc-hero h1 {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: clamp(2.2rem, 5vw, 3.5rem);
@@ -55,7 +55,7 @@
       letter-spacing: 0.02em;
       margin-bottom: 16px;
     }
-    .calc-hero h1 span { color: var(--red); }
+    .calc-hero h1 span { color: #ef4444; }
     .calc-hero p { color: var(--grey-light); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
 
     .calc-section {
@@ -103,7 +103,7 @@
     }
     .calc-step .step-num {
       font-size: 0.78rem;
-      color: var(--red);
+      color: #ef4444;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       font-weight: 600;
@@ -132,14 +132,14 @@
       font-size: 0.9rem;
       font-weight: 500;
     }
-    .calc-option:hover { border-color: var(--red); background: rgba(220,38,38,0.08); }
-    .calc-option.selected { border-color: var(--red); background: rgba(220,38,38,0.15); color: var(--white); }
+    .calc-option:hover { border-color: #ef4444; background: rgba(220,38,38,0.08); }
+    .calc-option.selected { border-color: #ef4444; background: rgba(220,38,38,0.15); color: var(--white); }
     .calc-option .opt-icon { font-size: 1.5rem; margin-bottom: 6px; display: block; }
     #brand-grid .calc-option .opt-icon img { width: 56px; height: 44px; object-fit: contain; filter: none; transition: filter 0.2s; display:block; margin: 0 auto 4px; background: transparent; }
     #brand-grid .calc-option:hover .opt-icon img,
     #brand-grid .calc-option.selected .opt-icon img { filter: none; }
     .calc-option .opt-label { font-size: 0.85rem; font-weight: 600; }
-    .calc-option .opt-sub { font-size: 0.75rem; color: var(--grey); margin-top: 3px; }
+    .calc-option .opt-sub { font-size: 0.75rem; color: #b3b3b3; margin-top: 3px; }
 
     .calc-nav {
       display: flex;
@@ -172,7 +172,7 @@
     }
     .result-card .result-label {
       font-size: 0.82rem;
-      color: var(--grey);
+      color: #b3b3b3;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 10px;
@@ -214,11 +214,11 @@
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 2rem;
       font-weight: 800;
-      color: var(--red);
+      color: #ef4444;
     }
     .result-disclaimer {
       font-size: 0.78rem;
-      color: var(--grey);
+      color: #b3b3b3;
       margin-top: 12px;
       line-height: 1.5;
     }
@@ -255,7 +255,7 @@
     }
     .info-box ul { list-style: none; padding: 0; margin: 0; }
     .info-box ul li { padding: 6px 0; color: var(--grey-light); font-size: 0.88rem; padding-left: 20px; position: relative; }
-    .info-box ul li::before { content: "✓"; position: absolute; left: 0; color: var(--red); }
+    .info-box ul li::before { content: "✓"; position: absolute; left: 0; color: #ef4444; }
   </style>
 </head>
 <body>
@@ -286,7 +286,7 @@
   <a href="/blog/">Blog</a>
   <a href="/om-os/">Om os</a>
   <a href="/kontakt/">Kontakt din mekaniker</a>
-  <a href="/book-tid/" style="color: var(--red);">Book tid →</a>
+  <a href="/book-tid/" style="color: #ef4444;">Book tid →</a>
 </div>
 
 <section class="calc-hero">
@@ -312,7 +312,7 @@
       <!-- Step 0: Car brand -->
       <div class="calc-step active" id="step-0">
         <div class="step-num">Trin 1 af 3</div>
-        <h2>Vælg dit <span style="color:var(--red)">bilmærke</span></h2>
+        <h2>Vælg dit <span style="color:#ef4444">bilmærke</span></h2>
         <p>Vi reparerer de fleste almindelige bilmærker — ikke eksklusive fabriksgaranti-biler.</p>
                 <div class="calc-grid" id="brand-grid">
           <div class="calc-option" data-brand="Toyota"><span class="opt-icon"><img src="/images/brand-toyota.png" alt="Toyota" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=&quot;font-size:.75rem;font-weight:900;color:#fff;&quot;>TOYOTA</span>'"></span><div class="opt-label">Toyota</div></div>
@@ -339,7 +339,7 @@
       <!-- Step 1: Car age -->
       <div class="calc-step" id="step-1">
         <div class="step-num">Trin 2 af 3</div>
-        <h2>Hvornår er bilen <span style="color:var(--red)">fra?</span></h2>
+        <h2>Hvornår er bilen <span style="color:#ef4444">fra?</span></h2>
         <p>Bilens alder påvirker prisen på reservedele.</p>
         <div class="calc-grid wide" id="age-grid">
           <div class="calc-option" data-age="old" data-age-mult="0.9">
@@ -371,7 +371,7 @@
       <!-- Step 2: Service type -->
       <div class="calc-step" id="step-2">
         <div class="step-num">Trin 3 af 3</div>
-        <h2>Hvad skal der <span style="color:var(--red)">laves?</span></h2>
+        <h2>Hvad skal der <span style="color:#ef4444">laves?</span></h2>
         <p>Vælg den ydelse, du har brug for.</p>
         <div class="calc-grid wide" id="service-grid">
           <div class="calc-option" data-service="Bremser foran" data-base-low="1200" data-base-high="1800">
@@ -443,7 +443,7 @@
       <!-- Step 3: Result -->
       <div class="calc-step" id="step-3">
         <div class="step-num">Dit prisestimat</div>
-        <h2>Her er dit <span style="color:var(--red)">estimat</span></h2>
+        <h2>Her er dit <span style="color:#ef4444">estimat</span></h2>
 
         <div class="result-card">
           <div class="result-label">Valgt ydelse</div>
@@ -543,7 +543,7 @@
       <div style="font-size:0.88rem;color:var(--grey-light);line-height:1.8;">
         <div>Man–Fre: 08:00–17:00</div>
         <div>Lørdag: 09:00–13:00</div>
-        <div style="color:var(--grey);">Søndag: Lukket</div>
+        <div style="color:#b3b3b3;">Søndag: Lukket</div>
       </div>
     </div>
   </div>
@@ -558,7 +558,7 @@
 </footer>
 
 <!-- Cookie banner (same as homepage) -->
-<div class="cookie-banner show" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
   <div class="cookie-banner__inner">
     <p>Vi bruger cookies for at forbedre din oplevelse. Læs mere i vores <a href="/cookiepolitik/">cookiepolitik</a>.</p>
     <div class="cookie-banner__actions">

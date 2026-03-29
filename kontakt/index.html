@@ -9,15 +9,15 @@
   <link rel="canonical" href="https://proautofix.dk/kontakt/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <style>
     .page-hero { background:var(--black); padding:80px 0 60px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.08); }
-    .page-hero .breadcrumb { font-size:.82rem; color:var(--grey); margin-bottom:20px; letter-spacing:.04em; }
-    .page-hero .breadcrumb a { color:var(--grey); text-decoration:none; }
+    .page-hero .breadcrumb { font-size:.82rem; color:#b3b3b3; margin-bottom:20px; letter-spacing:.04em; }
+    .page-hero .breadcrumb a { color:#b3b3b3; text-decoration:none; }
     .page-hero h1 { font-family:'Barlow Condensed',sans-serif; font-size:clamp(2.2rem,5vw,3.5rem); font-weight:800; text-transform:uppercase; letter-spacing:.02em; margin-bottom:16px; }
-    .page-hero h1 span { color:var(--red); }
+    .page-hero h1 span { color:#ef4444; }
     .page-hero p { color:var(--grey-light); font-size:1.05rem; max-width:540px; margin:0 auto; }
     .contact-section { background:var(--black-light); padding:60px 0 80px; }
     .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; max-width:960px; margin:0 auto; padding:0 20px; }
@@ -27,9 +27,9 @@
     .form-group { margin-bottom:20px; }
     .form-group label { display:block; font-size:.85rem; font-weight:600; color:var(--grey-light); margin-bottom:8px; letter-spacing:.04em; text-transform:uppercase; }
     .form-group input, .form-group textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); border-radius:8px; padding:13px 16px; color:var(--white); font-family:'Barlow',sans-serif; font-size:.95rem; transition:border-color .2s; box-sizing:border-box; }
-    .form-group input:focus, .form-group textarea:focus { outline:none; border-color:var(--red); }
+    .form-group input:focus, .form-group textarea:focus { outline:none; border-color:#ef4444; }
     .form-group textarea { resize:vertical; min-height:140px; }
-    .form-gdpr { font-size:.78rem; color:var(--grey); margin-top:12px; }
+    .form-gdpr { font-size:.78rem; color:#b3b3b3; margin-top:12px; }
     .form-gdpr a { color:var(--grey-light); }
     .form-success { display:none; text-align:center; padding:32px; }
     .form-success .success-icon { font-size:3rem; margin-bottom:16px; }
@@ -41,12 +41,12 @@
     .contact-method:last-child { border-bottom:none; }
     .contact-method .cm-icon { width:42px; height:42px; background:rgba(220,38,38,0.12); border:1px solid rgba(220,38,38,0.25); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
     .contact-method .cm-body { flex:1; }
-    .contact-method .cm-label { font-size:.78rem; color:var(--grey); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
+    .contact-method .cm-label { font-size:.78rem; color:#b3b3b3; text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
     .contact-method .cm-value { font-size:.95rem; font-weight:600; }
     .contact-method .cm-value a { color:var(--white); text-decoration:none; }
-    .contact-method .cm-value a:hover { color:var(--red); }
-    .contact-method .cm-sub { font-size:.8rem; color:var(--grey); margin-top:3px; }
-    .map-placeholder { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:10px; height:200px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--grey); font-size:.85rem; }
+    .contact-method .cm-value a:hover { color:#ef4444; }
+    .contact-method .cm-sub { font-size:.8rem; color:#b3b3b3; margin-top:3px; }
+    .map-placeholder { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:10px; height:200px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:#b3b3b3; font-size:.85rem; }
     .map-placeholder .map-icon { font-size:2rem; }
   </style>
 </head>
@@ -63,7 +63,7 @@
 <div class="nav__mobile" id="navMobile">
   <a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a>
   <a href="/om-os/">Om os</a><a href="/kontakt/" aria-current="page">Kontakt</a>
-  <a href="/book-tid/" style="color:var(--red);">Book tid →</a>
+  <a href="/book-tid/" style="color:#ef4444;">Book tid →</a>
 </div>
 
 <section class="page-hero">
@@ -90,7 +90,7 @@
       <div class="form-success" id="contactSuccess">
         <div class="success-icon">✅</div>
         <h3>Besked modtaget!</h3>
-        <p>Vi vender tilbage til dig inden for 24 timer. Haster det? Ring til os direkte på <a href="tel:+4581900500" style="color:var(--red);">+45 81 90 05 00</a>.</p>
+        <p>Vi vender tilbage til dig inden for 24 timer. Haster det? Ring til os direkte på <a href="tel:+4581900500" style="color:#ef4444;">+45 81 90 05 00</a>.</p>
       </div>
     </div>
 
@@ -115,7 +115,7 @@
         <div style="font-size:.88rem;color:var(--grey-light);line-height:2;">
           <div style="display:flex;justify-content:space-between;"><span>Man–Fre</span><span style="font-weight:600;">08:00–17:00</span></div>
           <div style="display:flex;justify-content:space-between;"><span>Lørdag</span><span style="font-weight:600;">09:00–13:00</span></div>
-          <div style="display:flex;justify-content:space-between;"><span>Søndag</span><span style="color:var(--grey);">Lukket</span></div>
+          <div style="display:flex;justify-content:space-between;"><span>Søndag</span><span style="color:#b3b3b3;">Lukket</span></div>
         </div>
       </div>
       <div>
@@ -151,7 +151,7 @@
 
 <div class="footer__bottom"><p>© 2025 ProAutoFix. CVR: 33313004.</p><nav class="footer__legal"><a href="/privatlivspolitik/">Privatlivspolitik</a><a href="/cookiepolitik/">Cookiepolitik</a><a href="/handelsbetingelser/">Handelsbetingelser</a></nav></div>
 </footer>
-<div class="cookie-banner show" id="cookieBanner" role="dialog" aria-modal="true"><div class="cookie-banner__inner"><p>Vi bruger cookies. <a href="/cookiepolitik/">Læs mere</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true"><div class="cookie-banner__inner"><p>Vi bruger cookies. <a href="/cookiepolitik/">Læs mere</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
 <button class="cookie-settings-fab" id="cookieSettingsFab" aria-label="Tilpas cookies"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="9" r="1.5" fill="#111"/><circle cx="14" cy="8" r="1" fill="#111"/><circle cx="16" cy="14" r="1.5" fill="#111"/><circle cx="10" cy="15" r="1" fill="#111"/><circle cx="12" cy="11" r="1" fill="#111"/></svg></button>
 <script src="/js/main.js"></script>
 <script>

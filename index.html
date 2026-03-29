@@ -41,11 +41,11 @@
 
   <!-- Styles -->
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <noscript><link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript></noscript>
   <style>
     /* Critical CSS inlined for instant render */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--black:#0a0a0a;--black-light:#111;--black-card:#161616;--red:#dc2626;--white:#fff;--grey:#6b7280;--grey-light:#9ca3af;--font-display:'Barlow Condensed',sans-serif;--font-body:'Barlow',sans-serif}
+    :root{--black:#0a0a0a;--black-light:#111;--black-card:#161616;--red:#ef4444;--white:#fff;--grey:#b3b3b3;--grey-light:#9ca3af;--font-display:'Barlow Condensed',sans-serif;--font-body:'Barlow',sans-serif}
     body{background:var(--black);color:var(--white);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
     .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);height:72px}
     .nav__inner{max-width:1200px;margin:0 auto;padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between}
@@ -128,17 +128,17 @@
     .find-us { background: var(--black); padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.06); }
     .find-us__inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
     @media(max-width:768px){ .find-us__inner { grid-template-columns: 1fr; } }
-    .find-us__info .section-label { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 12px; }
+    .find-us__info .section-label { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: #ef4444; font-weight: 700; margin-bottom: 12px; }
     .find-us__info .section-title { font-family: "Barlow Condensed", sans-serif; font-size: 2.2rem; font-weight: 800; text-transform: uppercase; line-height: 1.1; margin-bottom: 14px; }
-    .find-us__info .section-title span { color: var(--red); }
+    .find-us__info .section-title span { color: #ef4444; }
     .find-us__info .section-desc { color: var(--grey-light); font-size: .95rem; line-height: 1.7; margin-bottom: 24px; }
     .find-us__details { display: flex; flex-direction: column; gap: 14px; }
     .find-us__detail { display: flex; gap: 14px; align-items: flex-start; }
     .find-us__detail-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
-    .find-us__detail-label { font-size: .75rem; color: var(--grey); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 3px; }
+    .find-us__detail-label { font-size: .75rem; color: #b3b3b3; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 3px; }
     .find-us__detail-val { font-size: .95rem; font-weight: 600; }
     .find-us__detail-val a { color: var(--white); text-decoration: none; }
-    .find-us__detail-val a:hover { color: var(--red); }
+    .find-us__detail-val a:hover { color: #ef4444; }
     .find-us__map iframe { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
   </style>
 </head>
@@ -166,7 +166,7 @@
 <nav class="nav" role="navigation" aria-label="Primær navigation">
   <div class="nav__inner">
     <a href="/" class="nav__logo" aria-label="ProAutoFix forside">
-      <img src="/images/logo.png" alt="ProAutoFix – Autoværksted i Albertslund" width="124" width="136" height="68" style="height:68px;width:auto;display:block;background:transparent;">
+      <img src="/images/logo.png" alt="ProAutoFix – Autoværksted i Albertslund" width="124" height="68" style="height:68px;width:auto;display:block;background:transparent;">
     </a>
 
     <div class="nav__links">
@@ -194,7 +194,7 @@
   <a href="/blog/">Blog</a>
   <a href="/om-os/">Om os</a>
   <a href="/kontakt/">Kontakt din mekaniker</a>
-  <a href="/book-tid/" style="color: var(--red);">Book tid →</a>
+  <a href="/book-tid/" style="color: #ef4444;">Book tid →</a>
 </div>
 
 <!-- ══ HERO ══════════════════════════════════════════════════════ -->
@@ -265,7 +265,7 @@
         Brug vores prisberegner og få et estimat på din reparation på under 30 sekunder.
       </p>
     </div>
-    <a href="/priser/" class="btn" style="background:white;color:var(--red);flex-shrink:0;font-size:1rem;padding:16px 36px;">
+    <a href="/priser/" class="btn" style="background:white;color:#ef4444;flex-shrink:0;font-size:1rem;padding:16px 36px;">
       Beregn din pris →
     </a>
   </div>
@@ -347,7 +347,7 @@
 
       <a href="/services/synsforberedelse/" class="service-card fade-in" aria-label="Klargøring til syn">
         <div class="service-card__img">
-          <img src="/images/img-synsforberedelse.jpg" alt="Klargøring til syn" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw" onerror="this.style.display=\'none\'">>
+          <img src="/images/img-synsforberedelse.jpg" alt="Klargøring til syn" width="600" height="338" loading="lazy" sizes="(max-width:768px) 100vw, 33vw" onerror="this.style.display='none'">
         </div>
         <div class="service-card__body">
           <div class="service-card__tag">Undgå omsyn</div>
@@ -378,13 +378,13 @@
         </p>
         <ul style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
           <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--grey-light);">
-            <span style="color:var(--red);font-size:1.1rem;">✓</span> Faste priser — ingen skjulte gebyrer
+            <span style="color:#ef4444;font-size:1.1rem;">✓</span> Faste priser — ingen skjulte gebyrer
           </li>
           <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--grey-light);">
-            <span style="color:var(--red);font-size:1.1rem;">✓</span> Skriftligt tilbud inden arbejdet starter
+            <span style="color:#ef4444;font-size:1.1rem;">✓</span> Skriftligt tilbud inden arbejdet starter
           </li>
           <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--grey-light);">
-            <span style="color:var(--red);font-size:1.1rem;">✓</span> Estimater inkl. arbejdsløn
+            <span style="color:#ef4444;font-size:1.1rem;">✓</span> Estimater inkl. arbejdsløn
           </li>
         </ul>
         <a href="/priser/" class="btn btn-primary">Åbn fuld prisberegner →</a>
@@ -481,7 +481,7 @@
 
         <div class="calc-result" id="calcResult" role="status" aria-live="polite">
           <div class="section-label" style="margin-bottom:8px;" id="calcLabel">Bremser foran</div>
-          <div style="font-size:0.85rem;color:var(--grey);margin-bottom:4px;">Estimeret prisinterval inkl. arbejdsløn:</div>
+          <div style="font-size:0.85rem;color:#b3b3b3;margin-bottom:4px;">Estimeret prisinterval inkl. arbejdsløn:</div>
           <div class="calc-result__price">
             <span id="calcMin">1.200</span> – <span id="calcMax">1.800</span> kr.
           </div>
@@ -543,17 +543,17 @@
     .testimonial__stars { color:#00b67a; font-size:1.1rem; letter-spacing:2px; }
     .testimonial__text { color:var(--grey-light); font-size:.92rem; line-height:1.75; font-style:italic; flex:1; }
     .testimonial__car { border-radius:10px; background:linear-gradient(135deg,rgba(220,38,38,0.12),rgba(255,255,255,0.04)); padding:10px 14px 4px; margin:0 -4px; }
-    .testimonial__car-model { font-family:var(--font-display); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--red); margin-bottom:2px; }
+    .testimonial__car-model { font-family:var(--font-display); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:#ef4444; margin-bottom:2px; }
 
     .testimonial__details { display:flex; gap:12px; flex-wrap:wrap; }
     .testimonial__detail { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:6px 10px; font-size:.75rem; }
-    .testimonial__detail-label { color:var(--grey); text-transform:uppercase; letter-spacing:.06em; font-size:.65rem; margin-bottom:2px; }
+    .testimonial__detail-label { color:#b3b3b3; text-transform:uppercase; letter-spacing:.06em; font-size:.65rem; margin-bottom:2px; }
     .testimonial__detail-val { color:var(--white); font-weight:600; font-family:var(--font-display); font-size:.85rem; }
     .testimonial__author { display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid rgba(255,255,255,0.06); }
     .testimonial__avatar { width:38px; height:38px; border-radius:50%; background:var(--red); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:.85rem; color:#fff; flex-shrink:0; }
     .testimonial__name { font-weight:700; font-size:.9rem; }
-    .testimonial__meta { font-size:.75rem; color:var(--grey); }
-    .testimonial__source { font-size:.7rem; color:var(--grey); display:flex; align-items:center; gap:4px; }
+    .testimonial__meta { font-size:.75rem; color:#b3b3b3; }
+    .testimonial__source { font-size:.7rem; color:#b3b3b3; display:flex; align-items:center; gap:4px; }
   </style>
   <div class="container">
     <div class="section-header centered fade-in">
@@ -562,7 +562,7 @@
       <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;">
         <span style="color:#00b67a;font-size:1.3rem;">★★★★★</span>
         <span style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;">4,8 / 5</span>
-        <span style="color:var(--grey);font-size:0.9rem;">baseret på 124 anmeldelser</span>
+        <span style="color:#b3b3b3;font-size:0.9rem;">baseret på 124 anmeldelser</span>
       </div>
     </div>
     <div class="grid-3" style="gap:24px;">
@@ -912,7 +912,7 @@
       <div style="font-size:0.88rem;color:var(--grey-light);line-height:1.8;">
         <div>Man–Fre: 08:00–17:00</div>
         <div>Lørdag: 09:00–13:00</div>
-        <div style="color:var(--grey);">Søndag: Lukket</div>
+        <div style="color:#b3b3b3;">Søndag: Lukket</div>
       </div>
     </div>
   </div>
@@ -928,7 +928,7 @@
 </footer>
 
 <!-- ══ COOKIE BANNER ══════════════════════════════════════════════ -->
-<div class="cookie-banner show" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
   <div class="cookie-banner__inner">
     <p>
       Vi bruger cookies for at forbedre din oplevelse og analysere vores trafik.

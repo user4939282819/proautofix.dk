@@ -17,7 +17,7 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <noscript><link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript></noscript>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Udstødning & Katalysator i Albertslund", "url": "https://proautofix.dk/services/udstodning/", "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://proautofix.dk/"}, {"@type": "ListItem", "position": 2, "name": "Ydelser", "item": "https://proautofix.dk/services/"}, {"@type": "ListItem", "position": 3, "name": "Udstødning & Katalysator Albertslund", "item": "https://proautofix.dk/services/udstodning/"}]}, "mainEntity": {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hvad er en katalysator og hvad gør den?", "acceptedAnswer": {"@type": "Answer", "text": "Katalysatoren er et filter i udstødningssystemet der omdanner giftige udstødningsgasser (kulilte, kulbrinter og kvælstofilter) til CO2, vand og nitrogen. En defekt katalysator medfører øgede emissioner, motorlys på dashboardet, nedsat motorydelse og risiko for at dumpe til syn."}}, {"@type": "Question", "name": "Hvorfor støjer min udstødning?", "acceptedAnswer": {"@type": "Answer", "text": "En støjende udstødning skyldes typisk en revnet eller perforeret lyddæmper (muffler), en lækage i rørsystemet, en løs klemme eller flangepakning, eller rust der har ædt hul i røret. Lyden varierer fra et blødt sus til et højt brag afhængigt af skadens omfang. Vi diagnosticerer gratis inden vi giver et tilbud."}}, {"@type": "Question", "name": "Hvad betyder det når motorlyset lyser i forbindelse med udstødning?", "acceptedAnswer": {"@type": "Answer", "text": "Motorlyset (check engine) kan tændes af en lang række årsager. I forbindelse med udstødning skyldes det typisk en defekt lambda-sonde (O2-sensor), defekt katalysator, eller lækage i udstødningssystemet. Vi bruger OBD-scanner til at aflæse den præcise fejlkode og fastslå årsagen."}}, {"@type": "Question", "name": "Kan jeg køre med en støjende udstødning?", "acceptedAnswer": {"@type": "Answer", "text": "Kortvarigt ja, men vi fraråder det. En lækage i udstødningssystemet kan lade kulilte (CO) sive ind i kabinen — en farveløs, lugtfri gas der i høj koncentration er dødelig. Derudover er en støjende udstødning en syns-fejl der vil medføre underkendelse. Få det repareret hurtigst muligt."}}, {"@type": "Question", "name": "Hvad koster en ny katalysator i Albertslund?", "acceptedAnswer": {"@type": "Answer", "text": "En katalysator til en mellemstor bil koster typisk 3.000–8.000 kr. inkl. montering afhængigt af bilmærke og om det er original eller alternativ del. En OEM-alternativ katalysator fra anerkendt producent er typisk 30–50% billigere end original og holder mindst ligeså godt. Vi rådgiver om det bedste valg til din bil."}}, {"@type": "Question", "name": "Hvornår skal udstødningsrørene skiftes?", "acceptedAnswer": {"@type": "Answer", "text": "Udstødningsrør har ingen fast levetid — de slides afhængigt af vejforholdene, saltpåvirkning om vinteren og materialekvalitet. De fleste biler behøver udstødningsreparation én eller to gange i løbet af bilens levetid. Hold øje med rust, lyden og lug af udstødning i kabinen."}}]}}</script>
   <style>
@@ -25,11 +25,11 @@
     .svc-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;}
     .svc-hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--black) 40%,rgba(0,0,0,0.3) 100%);}
     .svc-hero__content{position:relative;z-index:2;width:100%;padding:60px 20px 50px;max-width:960px;margin:0 auto;}
-    .breadcrumb{font-size:.82rem;color:var(--grey);margin-bottom:16px;letter-spacing:.04em;}
-    .breadcrumb a{color:var(--grey);text-decoration:none;}
-    .breadcrumb a:hover{color:var(--red);}
+    .breadcrumb{font-size:.82rem;color:#b3b3b3;margin-bottom:16px;letter-spacing:.04em;}
+    .breadcrumb a{color:#b3b3b3;text-decoration:none;}
+    .breadcrumb a:hover{color:#ef4444;}
     .svc-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;line-height:1.05;}
-    .svc-hero h1 span{color:var(--red);}
+    .svc-hero h1 span{color:#ef4444;}
     .svc-hero p{color:var(--grey-light);max-width:580px;font-size:1.05rem;line-height:1.6;}
     .svc-body{background:var(--black-light);padding:60px 0 80px;}
     .svc-grid{display:grid;grid-template-columns:1fr 300px;gap:48px;max-width:960px;margin:0 auto;padding:0 20px;}
@@ -40,8 +40,8 @@
     .svc-content p{color:var(--grey-light);line-height:1.8;margin-bottom:16px;font-size:.95rem;}
     .svc-content ul{color:var(--grey-light);padding-left:0;list-style:none;margin-bottom:20px;}
     .svc-content ul li{padding:6px 0 6px 22px;position:relative;font-size:.92rem;line-height:1.6;}
-    .svc-content ul li::before{content:"✓";position:absolute;left:0;color:var(--red);font-weight:700;}
-    .svc-content a{color:var(--red);}
+    .svc-content ul li::before{content:"✓";position:absolute;left:0;color:#ef4444;font-weight:700;}
+    .svc-content a{color:#ef4444;}
     .price-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.88rem;}
     .price-table th{background:rgba(220,38,38,0.15);color:var(--white);padding:10px 14px;text-align:left;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:.85rem;}
     .price-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.06);color:var(--grey-light);}
@@ -56,11 +56,11 @@
     .faq-a.open{display:block;}
     .sidebar-card{background:var(--black-card);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:28px;margin-bottom:20px;}
     .sidebar-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;margin-bottom:16px;}
-    .sidebar-card .price-est{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--red);margin-bottom:4px;}
-    .sidebar-card .price-note{font-size:.78rem;color:var(--grey);margin-bottom:20px;}
+    .sidebar-card .price-est{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:#ef4444;margin-bottom:4px;}
+    .sidebar-card .price-note{font-size:.78rem;color:#b3b3b3;margin-bottom:20px;}
     .related-link{display:block;padding:10px 0;color:var(--grey-light);text-decoration:none;font-size:.88rem;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .2s;}
     .related-link:last-child{border-bottom:none;}
-    .related-link:hover{color:var(--red);}
+    .related-link:hover{color:#ef4444;}
     .cta-banner{background:var(--red);border-radius:12px;padding:28px;margin-top:40px;text-align:center;}
     .cta-banner h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;}
     .cta-banner p{font-size:.88rem;margin-bottom:16px;opacity:.9;}
@@ -78,7 +78,7 @@
 <div class="nav__mobile" id="navMobile">
   <a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a>
   <a href="/om-os/">Om os</a><a href="/kontakt/">Kontakt</a>
-  <a href="/book-tid/" style="color:var(--red);">Book tid →</a>
+  <a href="/book-tid/" style="color:#ef4444;">Book tid →</a>
 </div>
 <section class="svc-hero" aria-label="Udstødning & Katalysator i Albertslund">
   <img class="svc-hero__img" src="/images/img-udstodning.jpg" alt="Udstødningssystem og katalysator service hos ProAutoFix Albertslund" width="1600" height="900" loading="eager" fetchpriority="high">
@@ -174,7 +174,7 @@
   <div class="sidebar-card">
     <h3>Find os</h3>
     <p style="font-size:.85rem;color:var(--grey-light);margin-bottom:8px;">Rydagervej 6<br>2620 Albertslund</p>
-    <p style="font-size:.82rem;color:var(--grey);">Man–Fre 08–17 · Lør 09–13</p>
+    <p style="font-size:.82rem;color:#b3b3b3;">Man–Fre 08–17 · Lør 09–13</p>
     <a href="https://maps.google.com/?q=Rydagervej+6,+2620+Albertslund" target="_blank" rel="noopener" class="related-link" style="margin-top:8px;">Åbn i Google Maps →</a>
   </div>
 </aside>
@@ -246,7 +246,7 @@
     </nav>
   </div>
 </footer>
-<div class="cookie-banner show" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke" aria-live="polite">
   <div class="cookie-banner__inner">
     <p>Vi bruger cookies for at forbedre din oplevelse og analysere vores trafik. Læs mere i vores <a href="/cookiepolitik/">cookiepolitik</a>.</p>
     <div class="cookie-banner__actions">

@@ -9,19 +9,19 @@
   <link rel="canonical" href="https://proautofix.dk/book-tid/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebPage","name":"Book tid – ProAutoFix","url":"https://proautofix.dk/book-tid/","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forside","item":"https://proautofix.dk/"},{"@type":"ListItem","position":2,"name":"Book tid","item":"https://proautofix.dk/book-tid/"}]}}
   </script>
   <style>
     .page-hero { background: var(--black); padding: 80px 0 60px; text-align:center; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .page-hero .breadcrumb { font-size:.82rem; color:var(--grey); margin-bottom:20px; letter-spacing:.04em; }
-    .page-hero .breadcrumb a { color:var(--grey); text-decoration:none; }
-    .page-hero .breadcrumb a:hover { color:var(--red); }
+    .page-hero .breadcrumb { font-size:.82rem; color:#b3b3b3; margin-bottom:20px; letter-spacing:.04em; }
+    .page-hero .breadcrumb a { color:#b3b3b3; text-decoration:none; }
+    .page-hero .breadcrumb a:hover { color:#ef4444; }
     .page-hero h1 { font-family:'Barlow Condensed',sans-serif; font-size:clamp(2.2rem,5vw,3.5rem); font-weight:800; text-transform:uppercase; letter-spacing:.02em; margin-bottom:16px; }
-    .page-hero h1 span { color:var(--red); }
+    .page-hero h1 span { color:#ef4444; }
     .page-hero p { color:var(--grey-light); font-size:1.05rem; max-width:540px; margin:0 auto; }
     .booking-section { background:var(--black-light); padding:60px 0 80px; }
     .booking-grid { display:grid; grid-template-columns:1fr 360px; gap:48px; max-width:960px; margin:0 auto; padding:0 20px; }
@@ -36,14 +36,14 @@
       font-size:.95rem; transition:border-color .2s; box-sizing:border-box;
     }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      outline:none; border-color:var(--red);
+      outline:none; border-color:#ef4444;
     }
     .form-group select option { background:#1a1a1a; }
     .form-group textarea { resize:vertical; min-height:110px; }
     .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     @media(max-width:480px){ .form-row { grid-template-columns:1fr; } }
     .form-submit { width:100%; margin-top:8px; }
-    .form-gdpr { font-size:.78rem; color:var(--grey); margin-top:12px; line-height:1.5; }
+    .form-gdpr { font-size:.78rem; color:#b3b3b3; margin-top:12px; line-height:1.5; }
     .form-gdpr a { color:var(--grey-light); }
     .form-success { display:none; text-align:center; padding:32px; }
     .form-success .success-icon { font-size:3rem; margin-bottom:16px; }
@@ -55,7 +55,7 @@
     .hours-row:last-child { border-bottom:none; }
     .hours-row .day { color:var(--grey-light); }
     .hours-row .time { font-weight:600; }
-    .hours-row.closed .time { color:var(--grey); }
+    .hours-row.closed .time { color:#b3b3b3; }
     .trust-item { display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
     .trust-item:last-child { border-bottom:none; }
     .trust-item .trust-icon { font-size:1.2rem; flex-shrink:0; margin-top:2px; }
@@ -84,7 +84,7 @@
 <div class="nav__mobile" id="navMobile">
   <a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a>
   <a href="/om-os/">Om os</a><a href="/kontakt/">Kontakt</a>
-  <a href="/book-tid/" style="color:var(--red);">Book tid →</a>
+  <a href="/book-tid/" style="color:#ef4444;">Book tid →</a>
 </div>
 
 <section class="page-hero">
@@ -186,7 +186,7 @@
         <div class="trust-item"><span class="trust-icon">⚡</span><div class="trust-text"><strong>Svar inden for 24 timer</strong>Vi bekræfter din tid hurtigt</div></div>
         <div class="trust-item"><span class="trust-icon">💰</span><div class="trust-text"><strong>Pris aftalt på forhånd</strong>Ingen overraskelser på regningen</div></div>
         <div class="trust-item"><span class="trust-icon">🔧</span><div class="trust-text"><strong>Erfarne mekanikere</strong>10+ års erfaring med hverdagsbiler</div></div>
-        <div class="trust-item"><span class="trust-icon">📞</span><div class="trust-text"><strong>Ring direkte</strong><a href="tel:+4581900500" style="color:var(--red);">+45 81 90 05 00</a></div></div>
+        <div class="trust-item"><span class="trust-icon">📞</span><div class="trust-text"><strong>Ring direkte</strong><a href="tel:+4581900500" style="color:#ef4444;">+45 81 90 05 00</a></div></div>
       </div>
       <a href="/priser/" class="btn btn-secondary" style="width:100%;text-align:center;justify-content:center;box-sizing:border-box;">Se prisestimat først →</a>
     </div>
@@ -213,7 +213,7 @@
     <nav class="footer__legal"><a href="/privatlivspolitik/">Privatlivspolitik</a><a href="/cookiepolitik/">Cookiepolitik</a><a href="/handelsbetingelser/">Handelsbetingelser</a></nav>
   </div>
 </footer>
-<div class="cookie-banner show" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke"><div class="cookie-banner__inner"><p>Vi bruger cookies. Læs mere i vores <a href="/cookiepolitik/">cookiepolitik</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie samtykke"><div class="cookie-banner__inner"><p>Vi bruger cookies. Læs mere i vores <a href="/cookiepolitik/">cookiepolitik</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
 <button class="cookie-settings-fab" id="cookieSettingsFab" aria-label="Tilpas cookies" title="Tilpas cookies"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="9" r="1.5" fill="#111"/><circle cx="14" cy="8" r="1" fill="#111"/><circle cx="16" cy="14" r="1.5" fill="#111"/><circle cx="10" cy="15" r="1" fill="#111"/><circle cx="12" cy="11" r="1" fill="#111"/></svg></button>
 <script src="/js/main.js"></script>
 <script>

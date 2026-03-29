@@ -4,7 +4,6 @@
    Font: Barlow Condensed (display) + Barlow (body)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
 
 /* ── CSS Variables ─────────────────────────────────────────── */
 :root {
@@ -12,12 +11,12 @@
   --black-soft:  #141414;
   --black-card:  #1a1a1a;
   --black-border:#2a2a2a;
-  --red:         #e81c1c;
-  --red-dark:    #c41515;
+  --red:         #ef4444;
+  --red-dark:    #dc2626;
   --red-glow:    rgba(232,28,28,0.15);
   --white:       #ffffff;
   --white-soft:  #f5f5f5;
-  --grey:        #999999;
+  --grey:        #b3b3b3;
   --grey-light:  #cccccc;
 
   --font-display: 'Barlow Condensed', sans-serif;
@@ -882,3 +881,122 @@ p  { font-size: 1.05rem; color: var(--grey-light); }
   .hero__actions { flex-direction: column; }
   .btn-lg { padding: 16px 28px; font-size: 1rem; }
 }
+
+/* ── Accessibility Contrast Fixes (PageSpeed 100) ─────── */
+
+/* Fix: --grey (#999) is too low contrast on dark backgrounds for small text.
+   Upgrade grey text to #b3b3b3 (7:1+ on #0a0a0a) for affected elements. */
+
+/* Footer column titles, detail labels, descriptions */
+.footer__col-title { color: #b3b3b3; }
+.footer__desc { color: #b3b3b3; }
+.footer__bottom p { color: #b3b3b3; }
+.footer__legal a { color: #b3b3b3; }
+
+/* "Søndag: Lukket" inline style override */
+.footer__grid div[style*="color:var(--grey)"] { color: #b3b3b3 !important; }
+
+/* Cookie banner buttons */
+.cookie-btn--settings { color: #b3b3b3; }
+.cookie-banner a { color: #ff6b6b; }
+
+/* Section labels - red on dark needs higher contrast */
+.section-label { color: #ef4444; border-color: #ef4444; }
+
+/* "FIND OS" section labels & detail labels on dark bg */
+.find-us__detail-label { color: #b3b3b3; }
+.find-us .section-label { color: #ef4444; }
+
+/* btn-ghost: red text on dark background */
+.btn-ghost { color: #ef4444; border-color: #ef4444; }
+.btn-ghost:hover { background: #ef4444; color: #fff; }
+
+/* Section--dark: ensure all section labels meet contrast */
+.section--dark .section-label,
+.section--card .section-label { color: #ef4444; border-color: #ef4444; }
+
+/* Footer review badge text */
+.footer__review-badge { color: #b3b3b3; }
+
+/* Cookie banner on dark-soft bg */
+.cookie-banner p { color: #d1d5db; }
+
+/* Cookie banner TILPAS button needs more contrast */
+.cookie-btn--settings { color: #d1d5db; }
+
+/* Service card desc */
+.service-card__desc { color: #b3b3b3; }
+
+/* Why item desc */
+.why-item__desc { color: #b3b3b3; }
+
+/* Blog card excerpt */
+.blog-card__excerpt { color: #b3b3b3; }
+
+/* ── CLS Fixes ──────────────────────────────────────────── */
+
+/* Reserve space for info-strip to prevent layout shift */
+.info-strip {
+  min-height: 44px;
+  contain: layout style;
+}
+
+/* Cookie banner: hide by default, JS shows it. Prevents CLS. */
+.cookie-banner {
+  display: none;
+}
+
+/* Fonts: ensure display swap to prevent invisible text flash */
+/* Already using display=swap in Google Fonts URL */
+
+/* Nav: contain layout to prevent shift from font loading */
+.nav__links {
+  contain: layout;
+  min-height: 24px;
+}
+
+
+/* ── Animation compositing fix ─────────────────────────── */
+.fade-in {
+  will-change: opacity, transform;
+}
+.fade-in.visible {
+  will-change: auto;
+}
+
+/* ── Testimonial contrast fixes ─────────────────────────── */
+.testimonial__detail-label { color: #b3b3b3; }
+.testimonial__meta { color: #b3b3b3; }
+.testimonial__source { color: #b3b3b3; }
+.testimonial__text { color: #d1d5db; }
+
+/* Area card distance text */
+.area-card__dist { color: #b3b3b3 !important; }
+
+/* Blog card date */
+.blog-card__date { color: #b3b3b3; }
+
+/* Calc disclaimer */
+.calc-disclaimer { color: #b3b3b3; }
+
+/* Hero stat label */
+.hero__stat-label { color: #b3b3b3; }
+
+/* Price calculator labels */
+.form-group label { color: #b3b3b3; }
+
+/* Breadcrumb */
+.breadcrumb { color: #b3b3b3; }
+.breadcrumb a { color: #b3b3b3; }
+
+/* Page hero breadcrumb overrides (inline styles) */
+.page-hero .breadcrumb { color: #b3b3b3; }
+.page-hero .breadcrumb a { color: #b3b3b3; }
+
+/* Ensure all p tags on dark backgrounds meet contrast */
+.section--dark p, .section--card p { color: #d1d5db; }
+.footer p { color: #b3b3b3; }
+
+/* Footer contact items */
+.footer__contact-item { color: #d1d5db; }
+.footer__links a { color: #d1d5db; }

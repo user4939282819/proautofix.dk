@@ -9,15 +9,15 @@
   <link rel="canonical" href="https://proautofix.dk/blog/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <style>
     .page-hero{background:var(--black);padding:80px 0 60px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);}
-    .page-hero .breadcrumb{font-size:.82rem;color:var(--grey);margin-bottom:20px;letter-spacing:.04em;}
-    .page-hero .breadcrumb a{color:var(--grey);text-decoration:none;}
+    .page-hero .breadcrumb{font-size:.82rem;color:#b3b3b3;margin-bottom:20px;letter-spacing:.04em;}
+    .page-hero .breadcrumb a{color:#b3b3b3;text-decoration:none;}
     .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin-bottom:16px;}
-    .page-hero h1 span{color:var(--red);}
+    .page-hero h1 span{color:#ef4444;}
     .page-hero p{color:var(--grey-light);font-size:1.05rem;max-width:540px;margin:0 auto;}
     .blog-section{background:var(--black-light);padding:60px 0 80px;}
     .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;max-width:960px;margin:0 auto;padding:0 20px;}
@@ -27,11 +27,11 @@
     .blog-card__img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
     .blog-card:hover .blog-card__img img{transform:scale(1.04);}
     .blog-card__body{padding:22px;flex:1;display:flex;flex-direction:column;}
-    .blog-card__cat{font-size:.72rem;color:var(--red);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px;}
+    .blog-card__cat{font-size:.72rem;color:#ef4444;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px;}
     .blog-card__title{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;text-transform:uppercase;margin-bottom:10px;line-height:1.2;}
     .blog-card__excerpt{color:var(--grey-light);font-size:.84rem;line-height:1.6;flex:1;margin-bottom:14px;}
-    .blog-card__meta{font-size:.75rem;color:var(--grey);display:flex;gap:10px;}
-    .blog-card__cta{color:var(--red);font-size:.82rem;font-weight:600;margin-top:12px;letter-spacing:.02em;}
+    .blog-card__meta{font-size:.75rem;color:#b3b3b3;display:flex;gap:10px;}
+    .blog-card__cta{color:#ef4444;font-size:.82rem;font-weight:600;margin-top:12px;letter-spacing:.02em;}
   </style>
 </head>
 <body>
@@ -47,7 +47,7 @@
 <div class="nav__mobile" id="navMobile">
   <a href="/services/">Ydelser</a><a href="/priser/">Prisberegner</a><a href="/blog/">Blog</a>
   <a href="/om-os/">Om os</a><a href="/kontakt/">Kontakt</a>
-  <a href="/book-tid/" style="color:var(--red);">Book tid →</a>
+  <a href="/book-tid/" style="color:#ef4444;">Book tid →</a>
 </div>
 
 <section class="page-hero">
@@ -162,7 +162,7 @@
     </a>
 
     <a href="/blog/hvorfor-bestaa-bilsyn-foerste-gang/" class="blog-card">
-      <div class="blog-card__img"><img src="/images/img-synsforberedelse.jpg" alt="Bestå bilsyn første gang" width="600" height="360" loading="lazy" onerror="this.style.display=\'none\'">></div>
+      <div class="blog-card__img"><img src="/images/img-synsforberedelse.jpg" alt="Bestå bilsyn første gang" width="600" height="360" loading="lazy" onerror="this.style.display='none'"></div>
       <div class="blog-card__body">
         <div class="blog-card__cat">Syn & Klargøring</div>
         <div class="blog-card__title">Hvorfor du bør bestå bilsyn første gang</div>
@@ -186,7 +186,7 @@
   </div>
   <div class="footer__bottom"><p>© 2025 ProAutoFix. CVR: 33313004.</p><nav class="footer__legal"><a href="/privatlivspolitik/">Privatlivspolitik</a><a href="/cookiepolitik/">Cookiepolitik</a><a href="/handelsbetingelser/">Handelsbetingelser</a></nav></div>
 </footer>
-<div class="cookie-banner show" id="cookieBanner" role="dialog" aria-modal="true"><div class="cookie-banner__inner"><p>Vi bruger cookies. <a href="/cookiepolitik/">Læs mere</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true"><div class="cookie-banner__inner"><p>Vi bruger cookies. <a href="/cookiepolitik/">Læs mere</a>.</p><div class="cookie-banner__actions"><button class="cookie-btn cookie-btn--reject" data-cookie-reject>Kun nødvendige</button><button class="cookie-btn cookie-btn--accept" data-cookie-accept>Accepter alle</button></div></div></div>
 <button class="cookie-settings-fab" id="cookieSettingsFab" aria-label="Tilpas cookies"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="9" r="1.5" fill="#111"/><circle cx="14" cy="8" r="1" fill="#111"/><circle cx="16" cy="14" r="1.5" fill="#111"/><circle cx="10" cy="15" r="1" fill="#111"/><circle cx="12" cy="11" r="1" fill="#111"/></svg></button>
 <script src="/js/main.js"></script>
 

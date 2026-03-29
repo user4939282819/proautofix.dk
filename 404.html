@@ -8,19 +8,20 @@
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;600&display=swap"></noscript>
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <style>
     .error-page { min-height: 100vh; background: var(--black); display: flex; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; }
-    .error-code { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(6rem, 20vw, 12rem); font-weight: 900; line-height: 1; color: var(--red); opacity: 0.15; margin-bottom: -20px; }
+    .error-code { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(6rem, 20vw, 12rem); font-weight: 900; line-height: 1; color: #ef4444; opacity: 0.15; margin-bottom: -20px; }
     .error-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; text-transform: uppercase; margin-bottom: 16px; }
     .error-desc { color: var(--grey-light); font-size: 1rem; max-width: 440px; margin: 0 auto 32px; line-height: 1.7; }
     .error-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .error-quick { margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; max-width: 600px; margin-left: auto; margin-right: auto; }
     .error-quick a { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 14px 12px; text-decoration: none; color: var(--grey-light); font-size: .85rem; font-weight: 600; transition: all .2s; text-align: center; }
-    .error-quick a:hover { border-color: var(--red); color: var(--white); background: rgba(220,38,38,0.08); }
+    .error-quick a:hover { border-color: #ef4444; color: var(--white); background: rgba(220,38,38,0.08); }
   </style>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--black:#0a0a0a;--black-light:#111;--black-card:#161616;--black-soft:#141414;--black-border:#2a2a2a;--red:#ef4444;--red-dark:#c41515;--white:#fff;--grey:#b3b3b3;--grey-light:#ccc;--font-display:"Barlow Condensed",sans-serif;--font-body:"Barlow",sans-serif;--nav-h:72px;--max-w:1200px}body{background:var(--black);color:var(--white);font-family:var(--font-body);-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,10,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--black-border);height:var(--nav-h)}.nav__inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}.nav__logo{display:flex;align-items:center;text-decoration:none}.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:4px;font-family:var(--font-display);font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;transition:all .2s;cursor:pointer;border:none}.btn-primary{background:var(--red);color:var(--white)}.cookie-banner{display:none}.info-strip{min-height:44px}</style>
 </head>
 <body>
 <nav class="nav" role="navigation">
