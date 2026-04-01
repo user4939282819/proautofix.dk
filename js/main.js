@@ -206,19 +206,19 @@ const PriceCalc = (() => {
    */
   const PRICES = {
     bremser_for: {
-      lille:  [1200, 1800],
-      mellem: [1400, 2200],
-      stor:   [1800, 2800],
+      lille:  [1560, 1800],
+      mellem: [1820, 2200],
+      stor:   [2340, 2800],
     },
     bremser_bag: {
-      lille:  [1100, 1600],
-      mellem: [1300, 2000],
-      stor:   [1600, 2600],
+      lille:  [1430, 1600],
+      mellem: [1690, 2000],
+      stor:   [2080, 2600],
     },
     olieskift: {
-      lille:  [599, 799],
-      mellem: [699, 899],
-      stor:   [799, 1099],
+      lille:  [779, 799],
+      mellem: [909, 899],
+      stor:   [1039, 1099],
     },
     daekskifte: {
       lille:  [299, 499],
@@ -226,34 +226,34 @@ const PriceCalc = (() => {
       stor:   [399, 649],
     },
     stoddaempere: {
-      lille:  [2000, 3500],
-      mellem: [2400, 4200],
-      stor:   [3000, 5500],
+      lille:  [2600, 3500],
+      mellem: [3120, 4200],
+      stor:   [3900, 5500],
     },
     fjedre: {
-      lille:  [1800, 3000],
-      mellem: [2200, 3800],
-      stor:   [2800, 4800],
+      lille:  [2340, 3000],
+      mellem: [2860, 3800],
+      stor:   [3640, 4800],
     },
     tandrem: {
-      lille:  [2500, 4000],
-      mellem: [3000, 5000],
-      stor:   [3800, 6500],
+      lille:  [3250, 4000],
+      mellem: [3900, 5000],
+      stor:   [4940, 6500],
     },
     serviceeftersyn: {
-      lille:  [999, 1499],
-      mellem: [1199, 1799],
-      stor:   [1499, 2299],
+      lille:  [1299, 1499],
+      mellem: [1559, 1799],
+      stor:   [1949, 2299],
     },
     aircon: {
-      lille:  [599, 799],
-      mellem: [599, 799],
-      stor:   [699, 899],
+      lille:  [779, 799],
+      mellem: [779, 799],
+      stor:   [909, 899],
     },
     styretoej: {
-      lille:  [800, 1500],
-      mellem: [1000, 1800],
-      stor:   [1200, 2200],
+      lille:  [1040, 1500],
+      mellem: [1300, 1800],
+      stor:   [1560, 2200],
     },
   };
 
